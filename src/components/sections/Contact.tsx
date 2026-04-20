@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Send } from "lucide-react";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -40,44 +40,10 @@ const Contact = () => {
       <div className="container">
         <SectionHeading eyebrow={t("contact.subtitle")} title={t("contact.title")} />
 
-        <div className="mt-12 grid lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
-          <aside className="lg:col-span-2 space-y-6">
-            <div className="p-6 rounded-2xl bg-gradient-hero text-primary-foreground shadow-glow">
-              <h3 className="font-display text-xl font-semibold mb-4">Let's connect</h3>
-              <ul className="space-y-3 text-sm">
-                <li className="flex items-center gap-3">
-                  <Mail className="h-4 w-4 opacity-80" />
-                  <a href="mailto:hello@yourname.dev" className="hover:underline">hello@yourname.dev</a>
-                </li>
-                <li className="flex items-center gap-3">
-                  <MapPin className="h-4 w-4 opacity-80" />
-                  Yangon, Myanmar
-                </li>
-              </ul>
-              <div className="flex gap-2 mt-6 pt-6 border-t border-primary-foreground/20">
-                {[
-                  { Icon: Github, href: "https://github.com", label: "GitHub" },
-                  { Icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-                  { Icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-                ].map(({ Icon, href, label }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={label}
-                    className="p-2.5 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-smooth"
-                  >
-                    <Icon className="h-4 w-4" />
-                  </a>
-                ))}
-              </div>
-            </div>
-          </aside>
-
+        <div className="mt-12 max-w-2xl mx-auto">
           <form
             onSubmit={handleSubmit}
-            className="lg:col-span-3 p-6 md:p-8 rounded-2xl bg-card border border-border shadow-soft space-y-5"
+            className="p-6 md:p-8 rounded-2xl bg-card border border-border shadow-soft space-y-5"
           >
             <div className="space-y-2">
               <Label htmlFor="name">{t("contact.name")}</Label>
