@@ -45,9 +45,9 @@ const Navbar = () => {
       <nav className="container flex h-16 items-center justify-between" aria-label="Primary">
         <button
           onClick={() => handleNav("home")}
-          className="font-display text-xl font-bold tracking-tight text-foreground hover:text-primary transition-smooth"
+          className="text-xl font-bold tracking-tight text-foreground hover:text-primary transition-smooth"
         >
-          YN<span className="text-primary-glow">.</span>
+          MMK<span className="text-primary-glow">.</span>
         </button>
 
         <ul className="hidden lg:flex items-center gap-1">

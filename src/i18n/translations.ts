@@ -13,7 +13,7 @@ export const translations = {
 
     // Hero
     "hero.greeting": "Hello, I'm",
-    "hero.name": "Your Name",
+    "hero.name": "Mi Mi Khaing Lin",
     "hero.role": "Full Stack Developer",
     "hero.tagline": "I craft elegant, performant web products with thoughtful design and clean code.",
     "hero.cta.work": "View My Work",
@@ -92,7 +92,7 @@ export const translations = {
 
     // Hero
     "hero.greeting": "မင်္ဂလာပါ၊ ကျွန်တော်က",
-    "hero.name": "သင့်နာမည်",
+    "hero.name": "Mi Mi Khaing Lin",
     "hero.role": "Full Stack Developer",
     "hero.tagline": "ဂရုစိုက်သော ဒီဇိုင်းနှင့် သန့်ရှင်းသော ကုဒ်ဖြင့် လှပပြီး မြန်ဆန်သည့် ဝဘ်ထုတ်ကုန်များ ဖန်တီးပေးပါသည်။",
     "hero.cta.work": "လုပ်ငန်းများကြည့်ရန်",

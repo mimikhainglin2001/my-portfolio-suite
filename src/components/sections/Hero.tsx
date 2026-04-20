@@ -1,7 +1,7 @@
 import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import portrait from "@/assets/portrait.png";
+import portrait from "@/assets/portrait.jpg";
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -58,7 +58,7 @@ const Hero = () => {
               <div className="w-full h-full rounded-full bg-background overflow-hidden flex items-end justify-center">
                 <img
                   src={portrait}
-                  alt="Portrait of Your Name"
+                  alt="Portrait of Mi Mi Khaing Lin"
                   width={384}
                   height={384}
                   className="w-full h-full object-cover object-top"
