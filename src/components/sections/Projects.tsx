@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SectionHeading from "@/components/SectionHeading";
 import p1 from "@/assets/project-1.jpg";
@@ -45,13 +45,28 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-glow pt-2 transition-smooth"
-                >
-                  {t("projects.viewProject")}
-                  <ExternalLink className="h-3.5 w-3.5" />
-                </a>
+                <div className="flex items-center gap-3 pt-2">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.title} GitHub repository`}
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-smooth"
+                  >
+                    <Github className="h-4 w-4" />
+                    <span>Code</span>
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${project.title} live demo`}
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-glow transition-smooth"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    <span>Live Demo</span>
+                  </a>
+                </div>
               </div>
             </article>
           ))}
