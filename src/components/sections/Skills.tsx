@@ -9,17 +9,17 @@ const Skills = () => {
     {
       icon: Code2,
       title: t("skills.frontend"),
-      items: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vite", "Framer Motion"],
+      items: ["HTML5", "CSS3", "JavaScript", "Tailwind", "Bootstrap 5"],
     },
     {
       icon: Server,
       title: t("skills.backend"),
-      items: ["Node.js", "PostgreSQL", "REST APIs", "GraphQL", "Supabase", "Docker"],
+      items: ["PHP", "Laravel", "ASP.NET", "REST APIs", "Docker"],
     },
     {
       icon: Palette,
       title: t("skills.tools"),
-      items: ["Figma", "Git", "Vitest", "CI/CD", "Linear", "Notion"],
+      items: ["Figma", "Postman", "Git", "GitHub"],
     },
   ];
 

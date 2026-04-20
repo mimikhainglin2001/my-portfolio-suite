@@ -45,9 +45,11 @@ const Navbar = () => {
       <nav className="container flex h-16 items-center justify-between" aria-label="Primary">
         <button
           onClick={() => handleNav("home")}
-          className="text-xl font-bold tracking-tight text-foreground hover:text-primary transition-smooth"
+          className="text-xl font-mono font-bold tracking-tight text-foreground hover:text-primary transition-smooth"
         >
-          MMK<span className="text-primary-glow">.</span>
+          <span className="text-primary-glow">{"<"}</span>
+          Dev Portfolio
+          <span className="text-primary-glow">{"/>"}</span>
         </button>
 
         <ul className="hidden lg:flex items-center gap-1">
