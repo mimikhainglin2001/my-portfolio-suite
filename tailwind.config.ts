@@ -13,7 +13,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['"Playfair Display"', 'serif'],
+        display: ['Inter', 'system-ui', 'sans-serif'],
         mm: ['Padauk', 'Inter', 'sans-serif'],
       },
       colors: {
