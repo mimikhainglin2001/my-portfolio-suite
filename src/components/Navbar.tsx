@@ -48,7 +48,7 @@ const Navbar = () => {
           className="text-xl font-mono font-bold tracking-tight text-foreground hover:text-primary transition-smooth"
         >
           <span className="text-primary-glow">{"<"}</span>
-          Dev Portfolio
+          Mi Mi
           <span className="text-primary-glow">{"/>"}</span>
         </button>
 

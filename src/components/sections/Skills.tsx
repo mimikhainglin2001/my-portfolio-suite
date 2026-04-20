@@ -9,12 +9,12 @@ const Skills = () => {
     {
       icon: Code2,
       title: t("skills.frontend"),
-      items: ["HTML5", "CSS3", "JavaScript", "Tailwind", "Bootstrap 5"],
+      items: ["HTML5", "CSS3", "JavaScript", "Tailwind", "Bootstrap 5", "React"],
     },
     {
       icon: Server,
       title: t("skills.backend"),
-      items: ["PHP", "Laravel", "ASP.NET", "REST APIs", "Docker"],
+      items: ["PHP", "Laravel", "ASP.NET", "REST APIs"],
     },
     {
       icon: Palette,

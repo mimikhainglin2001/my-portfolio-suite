@@ -2,16 +2,16 @@ import { Github, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SectionHeading from "@/components/SectionHeading";
 import p1 from "@/assets/project-1.jpg";
-import p2 from "@/assets/project-2.jpg";
-import p3 from "@/assets/project-3.jpg";
+import p2 from "@/assets/project-2.png";
+import p3 from "@/assets/project-3.png";
 
 const Projects = () => {
   const { t } = useLanguage();
 
   const projects = [
-    { img: p1, title: t("projects.p1.title"), desc: t("projects.p1.desc"), tags: ["React", "Tailwind", "Node"] },
-    { img: p2, title: t("projects.p2.title"), desc: t("projects.p2.desc"), tags: ["React Native", "TypeScript"] },
-    { img: p3, title: t("projects.p3.title"), desc: t("projects.p3.desc"), tags: ["Next.js", "PostgreSQL"] },
+    { img: p1, title: t("projects.p1.title"), desc: t("projects.p1.desc"), tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind", "PHP", "MySQL", "Docker", "GitHub"] },
+    { img: p2, title: t("projects.p2.title"), desc: t("projects.p2.desc"), tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind", "PHP", "Laravel", "MySQL", "Redis", "Docker", "GitHub"] },
+    { img: p3, title: t("projects.p3.title"), desc: t("projects.p3.desc"), tags: ["ASP.NET", "MSSQL", "GitHub"] },
   ];
 
   return (
