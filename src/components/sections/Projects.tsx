@@ -1,0 +1,64 @@
+import { ExternalLink } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import SectionHeading from "@/components/SectionHeading";
+import p1 from "@/assets/project-1.jpg";
+import p2 from "@/assets/project-2.jpg";
+import p3 from "@/assets/project-3.jpg";
+
+const Projects = () => {
+  const { t } = useLanguage();
+
+  const projects = [
+    { img: p1, title: t("projects.p1.title"), desc: t("projects.p1.desc"), tags: ["React", "Tailwind", "Node"] },
+    { img: p2, title: t("projects.p2.title"), desc: t("projects.p2.desc"), tags: ["React Native", "TypeScript"] },
+    { img: p3, title: t("projects.p3.title"), desc: t("projects.p3.desc"), tags: ["Next.js", "PostgreSQL"] },
+  ];
+
+  return (
+    <section id="projects" className="py-24 bg-gradient-subtle">
+      <div className="container">
+        <SectionHeading eyebrow={t("projects.subtitle")} title={t("projects.title")} />
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          {projects.map((project) => (
+            <article
+              key={project.title}
+              className="group rounded-2xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-glow hover:-translate-y-1 transition-smooth"
+            >
+              <div className="aspect-[16/10] overflow-hidden bg-secondary">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  loading="lazy"
+                  width={1024}
+                  height={640}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
+                />
+              </div>
+              <div className="p-6 space-y-3">
+                <h3 className="font-display text-xl font-semibold">{project.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{project.desc}</p>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {project.tags.map((tag) => (
+                    <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground border border-border">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href="#"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-glow pt-2 transition-smooth"
+                >
+                  {t("projects.viewProject")}
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Projects;
