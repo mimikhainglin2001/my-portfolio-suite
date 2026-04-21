@@ -30,6 +30,9 @@ export const translations = {
     "about.experienceValue": "5+ Years",
     "about.projects": "Projects",
     "about.projectsValue": "40+ Shipped",
+    "about.frontend": "Frontend",
+    "about.backend": "Backend",
+    "about.database": "Database",
 
     // Skills
     "skills.title": "Skills & Tools",
@@ -109,6 +112,9 @@ export const translations = {
     "about.experienceValue": "၅ နှစ်ကျော်",
     "about.projects": "လုပ်ငန်းများ",
     "about.projectsValue": "၄၀ ကျော်",
+    "about.frontend": "Frontend",
+    "about.backend": "Backend",
+    "about.database": "Database",
 
     // Skills
     "skills.title": "ကျွမ်းကျင်မှုများ",
