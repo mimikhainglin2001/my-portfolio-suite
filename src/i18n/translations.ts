@@ -39,6 +39,7 @@ export const translations = {
     "skills.subtitle": "What I work with daily",
     "skills.frontend": "Frontend",
     "skills.backend": "Backend",
+    "skills.database": "Database & Cloud",
     "skills.tools": "Tools & Design",
 
     // Experience

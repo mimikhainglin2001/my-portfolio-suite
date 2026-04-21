@@ -71,11 +71,11 @@ const Projects = () => {
                     href={project.repo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`${project.title} GitHub repository`}
+                    aria-label={`${project.title} `}
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-smooth"
                   >
-                    <Github className="h-4 w-4" />
-                    <span>Code</span>
+                    {/* <Github className="h-4 w-4" /> */}
+                    {/* <span>Code</span> */}
                   </a>
                   {project.demo && (
                     <a

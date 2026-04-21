@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Code2, Server, Wrench } from "lucide-react";
+import { Code2, Database, Server, Wrench } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SectionHeading from "@/components/SectionHeading";
 
@@ -45,16 +45,29 @@ const Skills = () => {
         { name: "PHP", level: 85 },
         { name: "Laravel", level: 85 },
         { name: "ASP.NET", level: 75 },
-        { name: "REST APIs", level: 85 },
+        { name: "REST APIs", level: 70 },
+      ],
+    },
+    {
+      icon: Database,
+      title: t("skills.database"),
+      items: [
+        { name: "MySQL", level: 85 },
+        { name: "MSSQL", level: 80 },
+        { name: "Redis", level: 75 },
         { name: "Docker", level: 70 },
+        { name: "Digital Ocean", level: 70 },
+        { name: "CI/CD", level: 70 },
+
+
       ],
     },
     {
       icon: Wrench,
       title: t("skills.tools"),
       items: [
-        { name: "Figma", level: 80 },
-        { name: "Postman", level: 85 },
+        { name: "Figma", level: 90 },
+        { name: "Postman", level: 70 },
         { name: "Git", level: 90 },
         { name: "GitHub", level: 90 },
       ],
