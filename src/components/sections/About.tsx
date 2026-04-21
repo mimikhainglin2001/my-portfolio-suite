@@ -26,9 +26,10 @@ const About = () => {
     <section id="about" className="py-24 bg-background">
       <div className="container max-w-5xl">
         <div className="flex items-center gap-4 mb-12">
-          <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight whitespace-nowrap">
-            <span className="text-primary font-mono text-2xl md:text-3xl mr-2">01.</span>
-            {t("about.title")}
+          <div className="h-px bg-border flex-1" />
+          <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight whitespace-nowrap flex items-center justify-center gap-3 flex-shrink-0">
+            <span className="text-primary font-mono text-2xl md:text-3xl leading-none">01.</span>
+            <span className="leading-none">{t("about.title")}</span>
           </h2>
           <div className="h-px bg-border flex-1" />
         </div>

@@ -38,7 +38,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-24 bg-gradient-subtle">
       <div className="container">
-        <SectionHeading title={t("projects.title")} number="04" align="left" />
+        <SectionHeading title={t("projects.title")} number="04" align="center" />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {projects.map((project) => (
