@@ -28,7 +28,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-24 bg-background">
       <div className="container">
-        <SectionHeading eyebrow={t("experience.subtitle")} title={t("experience.title")} />
+        <SectionHeading title={t("experience.title")} number="03" align="left" />
 
         <div className="relative mt-14 max-w-3xl mx-auto">
           <div className="absolute left-3 md:left-1/2 top-2 bottom-2 w-px bg-border md:-translate-x-1/2" aria-hidden />
