@@ -13,13 +13,15 @@ const SectionHeading = ({ eyebrow, title, align = "center", number }: Props) => 
       </p>
     )}
     <div className={`flex items-center gap-4 ${align === "center" ? "justify-center" : ""} ${eyebrow ? "mt-3" : ""}`}>
-      {number && (
-        <span className="text-primary font-mono text-2xl md:text-3xl">{number}.</span>
-      )}
-      <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
-        {title}
+      <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight whitespace-nowrap flex items-center gap-3">
+        {number && (
+          <span className="text-primary font-mono text-2xl md:text-3xl leading-none">
+            {number}.
+          </span>
+        )}
+        <span className="leading-none">{title}</span>
       </h2>
-      <div className="h-px bg-border flex-1 max-w-xs hidden md:block" />
+      <div className="h-px bg-border flex-1" />
     </div>
   </div>
 );
