@@ -1,5 +1,9 @@
 import { useEffect, useRef, useState } from "react";
+<<<<<<< HEAD
 import { Code2, Database, Server, Wrench } from "lucide-react";
+=======
+import { Code2, Server, Database, Palette } from "lucide-react";
+>>>>>>> 683486c2c011d74f133bdfa2f8bc18e58dceade9
 import { useLanguage } from "@/contexts/LanguageContext";
 import SectionHeading from "@/components/SectionHeading";
 
@@ -45,6 +49,7 @@ const Skills = () => {
         { name: "PHP", level: 85 },
         { name: "Laravel", level: 85 },
         { name: "ASP.NET", level: 75 },
+<<<<<<< HEAD
         { name: "REST APIs", level: 70 },
       ],
     },
@@ -60,11 +65,24 @@ const Skills = () => {
         { name: "CI/CD", level: 70 },
 
 
+=======
+        { name: "REST APIs", level: 85 },
+>>>>>>> 683486c2c011d74f133bdfa2f8bc18e58dceade9
       ],
     },
     {
-      icon: Wrench,
-      title: t("skills.tools"),
+      icon: Database,
+      title: t("skills.databaseCloud"),
+      items: [
+        { name: "MySQL", level: 85 },
+        { name: "PostgreSQL", level: 80 },
+        { name: "Docker", level: 70 },
+        { name: "AWS", level: 65 },
+      ],
+    },
+    {
+      icon: Palette,
+      title: t("skills.toolsDesign"),
       items: [
         { name: "Figma", level: 90 },
         { name: "Postman", level: 70 },
@@ -77,9 +95,9 @@ const Skills = () => {
   return (
     <section ref={sectionRef} id="skills" className="py-24 bg-gradient-subtle">
       <div className="container">
-        <SectionHeading eyebrow={t("skills.subtitle")} title={t("skills.title")} />
+        <SectionHeading title={t("skills.title")} number="02" align="left" />
 
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <div className="grid md:grid-cols-2 gap-6 mt-12">
           {groups.map(({ icon: Icon, title, items }) => (
             <div
               key={title}
