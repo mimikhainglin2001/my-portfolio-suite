@@ -39,7 +39,8 @@ export const translations = {
     "skills.subtitle": "What I work with daily",
     "skills.frontend": "Frontend",
     "skills.backend": "Backend",
-    "skills.tools": "Tools & Design",
+    "skills.databaseCloud": "Database & Cloud",
+    "skills.toolsDesign": "Tools & Design",
 
     // Experience
     "experience.title": "Experience",
@@ -121,7 +122,8 @@ export const translations = {
     "skills.subtitle": "နေ့စဉ်အသုံးပြုသော ကိရိယာများ",
     "skills.frontend": "Frontend",
     "skills.backend": "Backend",
-    "skills.tools": "Tools & Design",
+    "skills.databaseCloud": "Database & Cloud",
+    "skills.toolsDesign": "Tools & Design",
 
     // Experience
     "experience.title": "အတွေ့အကြုံ",
