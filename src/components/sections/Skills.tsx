@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Code2, Server, Wrench } from "lucide-react";
+import { Code2, Server, Database, Palette } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SectionHeading from "@/components/SectionHeading";
 
@@ -46,12 +46,21 @@ const Skills = () => {
         { name: "Laravel", level: 85 },
         { name: "ASP.NET", level: 75 },
         { name: "REST APIs", level: 85 },
-        { name: "Docker", level: 70 },
       ],
     },
     {
-      icon: Wrench,
-      title: t("skills.tools"),
+      icon: Database,
+      title: t("skills.databaseCloud"),
+      items: [
+        { name: "MySQL", level: 85 },
+        { name: "PostgreSQL", level: 80 },
+        { name: "Docker", level: 70 },
+        { name: "AWS", level: 65 },
+      ],
+    },
+    {
+      icon: Palette,
+      title: t("skills.toolsDesign"),
       items: [
         { name: "Figma", level: 80 },
         { name: "Postman", level: 85 },
@@ -66,7 +75,7 @@ const Skills = () => {
       <div className="container">
         <SectionHeading eyebrow={t("skills.subtitle")} title={t("skills.title")} />
 
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <div className="grid md:grid-cols-2 gap-6 mt-12">
           {groups.map(({ icon: Icon, title, items }) => (
             <div
               key={title}
