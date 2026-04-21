@@ -9,9 +9,30 @@ const Projects = () => {
   const { t } = useLanguage();
 
   const projects = [
-    { img: p1, title: t("projects.p1.title"), desc: t("projects.p1.desc"), tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind", "PHP", "MySQL", "Docker", "GitHub"] },
-    { img: p2, title: t("projects.p2.title"), desc: t("projects.p2.desc"), tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind", "PHP", "Laravel", "MySQL", "Redis", "Docker", "GitHub"] },
-    { img: p3, title: t("projects.p3.title"), desc: t("projects.p3.desc"), tags: ["ASP.NET", "MSSQL", "GitHub"] },
+    {
+      img: p1,
+      title: t("projects.p1.title"),
+      desc: t("projects.p1.desc"),
+      tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind", "PHP", "MySQL", "Docker", "GitHub"],
+      repo: "#",
+      demo: "#",
+    },
+    {
+      img: p2,
+      title: t("projects.p2.title"),
+      desc: t("projects.p2.desc"),
+      tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind", "PHP", "Laravel", "MySQL", "Redis", "Docker", "GitHub"],
+      repo: "#",
+      demo: "#",
+    },
+    {
+      img: p3,
+      title: t("projects.p3.title"),
+      desc: t("projects.p3.desc"),
+      tags: ["ASP.NET", "MSSQL", "GitHub"],
+      repo: "#",
+      demo: null,
+    },
   ];
 
   return (
@@ -47,7 +68,7 @@ const Projects = () => {
                 </div>
                 <div className="flex items-center gap-3 pt-2">
                   <a
-                    href="#"
+                    href={project.repo}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${project.title} GitHub repository`}
@@ -56,16 +77,18 @@ const Projects = () => {
                     <Github className="h-4 w-4" />
                     <span>Code</span>
                   </a>
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${project.title} live demo`}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-glow transition-smooth"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    <span>Live Demo</span>
-                  </a>
+                  {project.demo && (
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${project.title} live demo`}
+                      className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-glow transition-smooth"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      <span>Live Demo</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </article>
