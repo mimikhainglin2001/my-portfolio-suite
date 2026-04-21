@@ -73,7 +73,7 @@ const Skills = () => {
   return (
     <section ref={sectionRef} id="skills" className="py-24 bg-gradient-subtle">
       <div className="container">
-        <SectionHeading eyebrow={t("skills.subtitle")} title={t("skills.title")} />
+        <SectionHeading title={t("skills.title")} number="02" align="left" />
 
         <div className="grid md:grid-cols-2 gap-6 mt-12">
           {groups.map(({ icon: Icon, title, items }) => (
