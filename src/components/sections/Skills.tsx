@@ -53,9 +53,10 @@ const Skills = () => {
       title: t("skills.databaseCloud"),
       items: [
         { name: "MySQL", level: 85 },
-        { name: "PostgreSQL", level: 80 },
+        { name: "MSSQL", level: 80 },
         { name: "Docker", level: 70 },
-        { name: "AWS", level: 65 },
+        { name: "CI/CD", level: 65 },
+        { name: "Docker", level: 80},
       ],
     },
     {

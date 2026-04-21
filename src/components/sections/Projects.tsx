@@ -15,7 +15,7 @@ const Projects = () => {
       desc: t("projects.p1.desc"),
       tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind", "PHP", "MySQL", "Docker", "GitHub"],
       repo: "#",
-      demo: "#",
+      demo: null,
     },
     {
       img: p2,
@@ -23,7 +23,7 @@ const Projects = () => {
       desc: t("projects.p2.desc"),
       tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind", "PHP", "Laravel", "MySQL", "Redis", "Docker", "GitHub"],
       repo: "#",
-      demo: "#",
+      demo: "https://itvisionsoft.com/",
     },
     {
       img: p3,

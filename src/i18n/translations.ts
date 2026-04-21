@@ -50,11 +50,11 @@ export const translations = {
     "experience.date1": "2026 — Present",
     "experience.desc1": "Led development of scalable full-stack applications, delivering high-impact features with strong performance and reliability.",
     "experience.role2": "Full Stack Developer",
-    "experience.company2": "Studio Co",
+    "experience.company2": "ITVisionHub",
     "experience.date2": "2025 — 2026",
     "experience.desc2": "Shipped 12+ client products spanning Next.js, Node and Postgres. Owned product engineering end to end.",
     "experience.role3": "Junior Developer",
-    "experience.company3": "Startup Lab",
+    "experience.company3": "ITVisionHub",
     "experience.date3": "2024 — 2025",
     "experience.desc3": "Built MVPs and internal tools. Learned the craft of shipping fast without breaking things.",
 
