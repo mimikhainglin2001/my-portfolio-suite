@@ -46,14 +46,14 @@ const Projects = () => {
               key={project.title}
               className="group rounded-2xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-glow hover:-translate-y-1 transition-smooth"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-secondary">
+              <div className="aspect-[16/10] overflow-hidden bg-secondary flex items-center justify-center">
                 <img
                   src={project.img}
                   alt={project.title}
                   loading="lazy"
                   width={1024}
                   height={640}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-smooth"
                 />
               </div>
               <div className="p-6 space-y-3">
