@@ -39,10 +39,13 @@ const Navbar = () => {
         "fixed top-0 inset-x-0 z-50 transition-smooth",
         scrolled
           ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-soft"
-          : "bg-transparent"
+          : "bg-transparent",
       )}
     >
-      <nav className="container flex h-16 items-center justify-between" aria-label="Primary">
+      <nav
+        className="container flex h-16 items-center justify-between"
+        aria-label="Primary"
+      >
         <button
           onClick={() => handleNav("home")}
           className="text-xl font-mono font-bold tracking-tight text-foreground hover:text-primary transition-smooth"
@@ -83,11 +86,20 @@ const Navbar = () => {
             onClick={toggleTheme}
             aria-label="Toggle theme"
           >
-            {theme === "light" ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
+            {theme === "light" ? (
+              <Moon className="h-4 w-4" />
+            ) : (
+              <Sun className="h-4 w-4" />
+            )}
           </Button>
 
-          <Button asChild variant="default" size="sm" className="hidden sm:inline-flex gap-2">
-            <a href="/resume.pdf" download="Your-Name-Resume.pdf">
+          <Button
+            asChild
+            variant="default"
+            size="sm"
+            className="hidden sm:inline-flex gap-2"
+          >
+            <a href="/Mi Mi CV Resume.pdf" download>
               <Download className="h-4 w-4" />
               {t("nav.resume")}
             </a>
@@ -100,7 +112,11 @@ const Navbar = () => {
             onClick={() => setMobileOpen((o) => !o)}
             aria-label="Toggle menu"
           >
-            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {mobileOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
           </Button>
         </div>
       </nav>
