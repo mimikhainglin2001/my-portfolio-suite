@@ -32,7 +32,8 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
-    const parsed = bodySchema.safeParse(req.body);
+    const rawBody = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
+    const parsed = bodySchema.safeParse(rawBody);
     if (!parsed.success) {
       res.status(400).json({ ok: false, error: "Invalid request" });
       return;
@@ -56,12 +57,15 @@ export default async function handler(req: any, res: any) {
     });
 
     if ((result as any)?.error) {
-      res.status(502).json({ ok: false, error: "Email provider error" });
+      const providerMessage =
+        (result as any).error?.message ?? "Email provider rejected the request";
+      res.status(502).json({ ok: false, error: providerMessage });
       return;
     }
 
     res.status(200).json({ ok: true });
   } catch (err) {
-    res.status(500).json({ ok: false, error: "Server error" });
+    const message = err instanceof Error ? err.message : "Server error";
+    res.status(500).json({ ok: false, error: message });
   }
 }
