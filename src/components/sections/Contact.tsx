@@ -22,17 +22,34 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (loading) return;
     const parsed = contactSchema.safeParse(form);
     if (!parsed.success) {
       toast.error(t("contact.error"));
       return;
     }
     setLoading(true);
-    // Frontend-only submission (no backend wired yet)
-    await new Promise((r) => setTimeout(r, 800));
-    toast.success(t("contact.success"));
-    setForm({ name: "", email: "", message: "" });
-    setLoading(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(parsed.data),
+      });
+
+      const data = (await res.json().catch(() => null)) as { ok?: boolean; error?: string } | null;
+
+      if (!res.ok || !data?.ok) {
+        toast.error(data?.error ?? t("contact.error"));
+        return;
+      }
+
+      toast.success(t("contact.success"));
+      setForm({ name: "", email: "", message: "" });
+    } catch {
+      toast.error(t("contact.error"));
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
