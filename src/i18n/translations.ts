@@ -79,6 +79,9 @@ export const translations = {
     "contact.sending": "Sending...",
     "contact.success": "Message sent! I'll get back to you soon.",
     "contact.error": "Please fill out all fields correctly.",
+    "contact.configError": "Contact form is not configured yet.",
+    "contact.sendFailed": "Failed to send message. Please try again.",
+    "contact.emailFailed": "Saved, but email was not sent. Please try again.",
 
     // Footer
     "footer.rights": "All rights reserved.",
@@ -162,6 +165,9 @@ export const translations = {
     "contact.sending": "ပို့နေသည်...",
     "contact.success": "စာပို့ပြီးပါပြီ! မကြာမီ ပြန်လည်အကြောင်းပြန်ပါမည်။",
     "contact.error": "ကျေးဇူးပြု၍ အချက်အလက်အားလုံး မှန်ကန်စွာ ဖြည့်စွက်ပါ။",
+    "contact.configError": "ဆက်သွယ်ရန် ဖောင်ကို မသတ်မှတ်ရသေးပါ။",
+    "contact.sendFailed": "စာမပို့နိုင်ပါ။ ထပ်မံကြိုးစားပါ။",
+    "contact.emailFailed": "သိမ်းပြီးပါပြီ၊ ဒါပေမယ့် အီးမေးလ် မပို့နိုင်ပါ။ ထပ်မံကြိုးစားပါ။",
 
     // Footer
     "footer.rights": "မူပိုင်ခွင့်အားလုံး လက်ဝယ်ထားသည်။",
