@@ -53,15 +53,15 @@ const Hero = () => {
 
         <div className="relative flex justify-center lg:justify-end animate-fade-in">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-hero rounded-full blur-3xl opacity-20 scale-90" />
-            <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-hero p-1 shadow-glow">
-              <div className="w-full h-full rounded-full bg-background overflow-hidden flex items-end justify-center">
+            <div className="absolute inset-0 bg-gradient-hero rounded-[2rem] blur-3xl opacity-20 scale-90" />
+            <div className="relative w-64 md:w-80 rounded-[2rem] bg-gradient-hero p-1 shadow-glow">
+              <div className="rounded-[1.75rem] bg-background overflow-hidden">
                 <img
                   src={portrait}
                   alt="Portrait of Mi Mi Khaing Lin"
-                  width={384}
-                  height={384}
-                  className="w-full h-full object-cover object-top"
+                  width={960}
+                  height={1280}
+                  className="block w-full h-auto"
                 />
               </div>
             </div>
