@@ -54,14 +54,14 @@ const Hero = () => {
         <div className="relative flex justify-center lg:justify-end animate-fade-in">
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-hero rounded-[2rem] blur-3xl opacity-20 scale-90" />
-            <div className="relative w-64 md:w-80 aspect-[3/4] rounded-[2rem] bg-gradient-hero p-1 shadow-glow">
-              <div className="w-full h-full rounded-[1.75rem] bg-background overflow-hidden">
+            <div className="relative w-64 md:w-80 rounded-[2rem] bg-gradient-hero p-1 shadow-glow">
+              <div className="rounded-[1.75rem] bg-background overflow-hidden">
                 <img
                   src={portrait}
                   alt="Portrait of Mi Mi Khaing Lin"
                   width={960}
                   height={1280}
-                  className="w-full h-full object-cover object-center"
+                  className="block w-full h-auto"
                 />
               </div>
             </div>
