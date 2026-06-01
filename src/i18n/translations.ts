@@ -48,15 +48,15 @@ export const translations = {
     "experience.role1": "Senior Full Stack Developer",
     "experience.company1": "ITVisionHub",
     "experience.date1": "2026 — Present",
-    "experience.desc1": "Led development of scalable full-stack applications, delivering high-impact features with strong performance and reliability.",
+    "experience.desc1": "Developed and maintained scalable full-stack web applications using ASP.NET, Laravel, React.js, and RESTful APIs, delivering high-quality business solutions.\n▹Optimized application performance, database queries, and system workflows, improving response times and overall user experience.\n▹Implemented secure authentication, role-based access control, and CI/CD deployment processes, enhancing system reliability and development efficiency.",
     "experience.role2": "Full Stack Developer",
     "experience.company2": "ITVisionHub",
     "experience.date2": "2025 — 2026",
-    "experience.desc2": "Shipped 12+ client products spanning Next.js, Node and Postgres. Owned product engineering end to end.",
+    "experience.desc2": "Built and delivered full-stack web applications using PHP, Laravel, React.js, and RESTful APIs, supporting business-critical operations.\n▹Collaborated with cross-functional teams to develop new features, troubleshoot issues, and improve application reliability.\n▹Enhanced application performance through database optimization and code refactoring, resulting in faster page load times and improved efficiency.",
     "experience.role3": "Junior Developer",
     "experience.company3": "ITVisionHub",
     "experience.date3": "2024 — 2025",
-    "experience.desc3": "Built MVPs and internal tools. Learned the craft of shipping fast without breaking things.",
+    "experience.desc3": "Developed and maintained responsive web applications using modern frontend and backend technologies for multiple client projects.\n▹Collaborated with senior developers and designers to transform UI/UX designs into functional, user-friendly interfaces.\n▹Participated in debugging, testing, and performance optimization efforts, improving application stability and code quality.",
 
     // Projects
     "projects.title": "Featured Projects",
