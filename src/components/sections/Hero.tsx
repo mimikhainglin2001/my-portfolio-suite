@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
 
         <div className="relative flex justify-center lg:justify-end animate-fade-in">
-          <div className="relative w-full max-w-sm lg:max-w-none">
+          <div className="relative w-full max-w-sm lg:max-w-xs">
             <div className="absolute inset-0 bg-gradient-hero rounded-[2rem] blur-3xl opacity-20 scale-90" />
             <div className="relative w-full rounded-[2rem] bg-gradient-hero p-1 shadow-glow">
               <div className="rounded-[1.75rem] bg-background overflow-hidden">
