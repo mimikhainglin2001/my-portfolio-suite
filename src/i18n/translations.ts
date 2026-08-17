@@ -68,6 +68,12 @@ export const translations = {
     "projects.p2.desc": "A complete training management solution built with Laravel for managing courses, trainers, students, schedules, and progress tracking. Deployed in production for ITVisionSoft.",
     "projects.p3.title": "Employee Management System",
     "projects.p3.desc": "An enterprise employee management application built on ASP.NET and MSSQL. Manages employee records, departments, attendance, and reporting with a clean admin interface.",
+    "projects.p4.title": "Food Delivery App",
+    "projects.p4.desc": "A cross-platform mobile food delivery app built with React Native. Features restaurant browsing, real-time order tracking, cart management, and secure checkout for a smooth on-demand food experience.",
+    "projects.p5.title": "Movie App",
+    "projects.p5.desc": "A sleek React Native movie discovery app that lets users browse trending films, view details, watch trailers, and build personal watchlists using a popular movie API.",
+    "projects.p6.title": "Real Estate App",
+    "projects.p6.desc": "A React Native real estate browsing app for exploring property listings with filters, maps, image galleries, and agent contact details — designed for a clean mobile-first experience.",
 
     // Contact
     "contact.title": "Let's Work Together",
@@ -148,12 +154,18 @@ export const translations = {
     "projects.title": "ရွေးချယ်ထားသော လုပ်ငန်းများ",
     "projects.subtitle": "မကြာသေးမီက လုပ်ငန်းအချို့",
     "projects.viewProject": "ကြည့်ရန်",
-    "projects.p1.title": "Commerce Dashboard",
+    "projects.p1.title": "Library Management System",
     "projects.p1.desc": "ထုတ်ကုန်၊ အော်ဒါနှင့် analytics များကို real time စီမံခန့်ခွဲရန် ခေတ်မီ admin panel။",
     "projects.p2.title": "Mobile Banking App",
     "projects.p2.desc": "biometric auth နှင့် real-time transactions ပါဝင်သော လုံခြုံ၍ လှပသည့် မိုဘိုင်းဘဏ်လုပ်ငန်း။",
     "projects.p3.title": "Analytics Platform",
     "projects.p3.desc": "custom dashboards နှင့် team collaboration ပါဝင်သော self-serve analytics SaaS။",
+    "projects.p4.title": "အစားအသောက် ပို့ဆောင်မှု App",
+    "projects.p4.desc": "React Native ဖြင့် တည်ဆောက်ထားသော cross-platform မိုဘိုင်းအစားအသောက်ပို့ဆောင်မှု app ဖြစ်ပါသည်။ ရესტဝေါင်းများရှာဖွေးခြင်း၊ order tracking၊ cart နှင့် လုံခြုံစွာငွေပေးချေမှုများပါဝင်ပါသည်။",
+    "projects.p5.title": "ရုပ်ရှင် App",
+    "projects.p5.desc": "React Native ဖြင့် တည်ဆောက်ထားသော ရုပ်ရှင်ရှာဖွေမှု app ဖြစ်ပါသည်။ trending films များကြည့်ရှုခြင်း၊ အသေးစိတ်ကြည့်ရန်၊ trailer များကြည့်ခြင်းနှင့် ကိုယ်စားလှယ်စာရင်းပြုလုပ်ခြင်းများ ပါဝင်ပါသည်။",
+    "projects.p6.title": "အိမ်ခြံမြေ App",
+    "projects.p6.desc": "React Native ဖြင့် တည်ဆောက်ထားသော အိမ်ခြံမြေ listing များရှာဖွေမှု app ဖြစ်ပါသည်။ filters၊ maps၊ ပုံရိပ်များ နှင့် agent ဆက်သွယ်ရန် အချက်အလက်များပါဝင်သော mobile-first experience ဖြစ်ပါသည်။",
 
     // Contact
     "contact.title": "အတူတကွ လုပ်ကိုင်ကြရအောင်",

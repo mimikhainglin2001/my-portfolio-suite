@@ -34,6 +34,8 @@ const Skills = () => {
         { name: "HTML5", level: 95 },
         { name: "CSS3", level: 90 },
         { name: "JavaScript", level: 85 },
+        { name: "React", level: 90 },
+        { name: "React Native", level: 85 },
         { name: "Tailwind", level: 90 },
         { name: "Bootstrap 5", level: 85 },
       ],
@@ -46,6 +48,7 @@ const Skills = () => {
         { name: "Laravel", level: 85 },
         { name: "ASP.NET", level: 75 },
         { name: "REST APIs", level: 85 },
+        { name: "Microservices", level: 80 },
       ],
     },
     {
@@ -54,9 +57,8 @@ const Skills = () => {
       items: [
         { name: "MySQL", level: 85 },
         { name: "MSSQL", level: 80 },
-        { name: "Docker", level: 70 },
+        { name: "Docker", level: 80 },
         { name: "CI/CD", level: 65 },
-        { name: "Docker", level: 80},
       ],
     },
     {
