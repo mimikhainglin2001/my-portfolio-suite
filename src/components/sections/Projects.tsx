@@ -16,7 +16,17 @@ const Projects = () => {
       img: p1,
       title: t("projects.p1.title"),
       desc: t("projects.p1.desc"),
-      tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind", "PHP", "MySQL", "Docker", "GitHub"],
+      tags: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap",
+        "Tailwind",
+        "PHP",
+        "MySQL",
+        "Docker",
+        "GitHub",
+      ],
       repo: "#",
       demo: null,
     },
@@ -24,7 +34,19 @@ const Projects = () => {
       img: p2,
       title: t("projects.p2.title"),
       desc: t("projects.p2.desc"),
-      tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind", "PHP", "Laravel", "MySQL", "Redis", "Docker", "GitHub"],
+      tags: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap",
+        "Tailwind",
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Redis",
+        "Docker",
+        "GitHub",
+      ],
       repo: "#",
       demo: "https://itvisionsoft.com/",
     },
@@ -40,7 +62,13 @@ const Projects = () => {
       img: p4,
       title: t("projects.p4.title"),
       desc: t("projects.p4.desc"),
-      tags: ["React Native", "JavaScript", "Redux", "API Integration"],
+      tags: [
+        "React Native",
+        "JavaScript",
+        "Redux",
+        "API Integration",
+        "AppWrite",
+      ],
       repo: "#",
       demo: null,
     },
@@ -56,7 +84,7 @@ const Projects = () => {
       img: p6,
       title: t("projects.p6.title"),
       desc: t("projects.p6.desc"),
-      tags: ["React Native", "JavaScript", "Maps API", "Firebase"],
+      tags: ["React Native", "JavaScript", "Maps API", "AppWrite"],
       repo: "#",
       demo: null,
     },
@@ -65,7 +93,11 @@ const Projects = () => {
   return (
     <section id="projects" className="py-24 bg-gradient-subtle">
       <div className="container">
-        <SectionHeading title={t("projects.title")} number="04" align="center" />
+        <SectionHeading
+          title={t("projects.title")}
+          number="04"
+          align="center"
+        />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {projects.map((project) => (
@@ -84,11 +116,18 @@ const Projects = () => {
                 />
               </div>
               <div className="p-6 space-y-3">
-                <h3 className="font-display text-xl font-semibold">{project.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{project.desc}</p>
+                <h3 className="font-display text-xl font-semibold">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {project.desc}
+                </p>
                 <div className="flex flex-wrap gap-2 pt-1">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground border border-border">
+                    <span
+                      key={tag}
+                      className="text-xs px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground border border-border"
+                    >
                       {tag}
                     </span>
                   ))}
