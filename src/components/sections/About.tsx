@@ -8,17 +8,17 @@ const About = () => {
     {
       icon: Code2,
       title: t("about.frontend"),
-      items: "HTML5, CSS3, Bootstrap 5, Tailwind, JavaScript",
+      items: "HTML5, CSS3, JavaScript, React, React Native, Tailwind, Bootstrap 5",
     },
     {
       icon: Server,
       title: t("about.backend"),
-      items: "PHP, Laravel, ASP.NET, REST APIs",
+      items: "PHP, Laravel, ASP.NET, REST APIs, Microservices",
     },
     {
       icon: Database,
       title: t("about.database"),
-      items: "MySQL, MSSQL, Redis",
+      items: "MySQL, MSSQL, PostgreSQL, MongoDB, Redis",
     },
   ];
 
