@@ -57,6 +57,8 @@ const Skills = () => {
       items: [
         { name: "MySQL", level: 85 },
         { name: "MSSQL", level: 80 },
+        { name: "PostgreSQL", level: 80 },
+        { name: "MongoDB", level: 75 },
         { name: "Docker", level: 80 },
         { name: "CI/CD", level: 65 },
       ],
