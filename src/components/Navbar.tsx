@@ -99,7 +99,7 @@ const Navbar = () => {
             size="sm"
             className="hidden sm:inline-flex gap-2"
           >
-            <a href="/Mi Mi CV Resume.pdf" download>
+            <a href="/Mi_Mi_Khaing_Lin_CV_Final.pdf" download>
               <Download className="h-4 w-4" />
               {t("nav.resume")}
             </a>
