@@ -91,7 +91,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-gradient-subtle">
+    <section id="projects" className="py-24 bg-secondary/50">
       <div className="container">
         <SectionHeading
           title={t("projects.title")}
@@ -99,13 +99,13 @@ const Projects = () => {
           align="center"
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
           {projects.map((project) => (
             <article
               key={project.title}
-              className="group rounded-2xl overflow-hidden bg-card border border-border shadow-soft hover:shadow-glow hover:-translate-y-1 transition-smooth"
+              className="group rounded-md overflow-hidden bg-card border border-border hover:border-primary transition-smooth"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-secondary">
+              <div className="aspect-[16/10] overflow-hidden bg-secondary border-b border-border">
                 <img
                   src={project.img}
                   alt={project.title}
@@ -126,7 +126,7 @@ const Projects = () => {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs px-2.5 py-1 rounded-full bg-secondary text-secondary-foreground border border-border"
+                    className="text-xs px-2.5 py-1 rounded-sm bg-secondary text-secondary-foreground border border-border"
                     >
                       {tag}
                     </span>
@@ -138,7 +138,7 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${project.title} source code`}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-primary transition-smooth"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground hover:text-primary transition-smooth"
                   >
                     <Github className="h-4 w-4" />
                     <span>Code</span>

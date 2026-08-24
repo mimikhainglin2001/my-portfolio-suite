@@ -38,32 +38,34 @@ const Navbar = () => {
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-smooth",
         scrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-soft"
+          ? "bg-background/95 backdrop-blur-lg border-b border-border"
           : "bg-transparent",
       )}
     >
       <nav
-        className="container flex h-16 items-center justify-between"
+        className="container flex h-20 items-center justify-between"
         aria-label="Primary"
       >
-        <button
+        <Button
+          variant="ghost"
           onClick={() => handleNav("home")}
-          className="text-xl font-mono font-bold tracking-tight text-foreground hover:text-primary transition-smooth"
+          className="h-auto p-0 font-display text-xl font-bold text-foreground hover:bg-transparent hover:text-primary"
         >
-          <span className="text-primary-glow">{"<"}</span>
-          Mi Mi
-          <span className="text-primary-glow">{"/>"}</span>
-        </button>
+          <span className="text-primary">{"<"}</span>
+          Dev Portfolio
+          <span className="text-primary">{"/>"}</span>
+        </Button>
 
         <ul className="hidden lg:flex items-center gap-1">
           {NAV_ITEMS.map((item) => (
             <li key={item.id}>
-              <button
+              <Button
+                variant="ghost"
                 onClick={() => handleNav(item.id)}
-                className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md"
+                className="h-auto px-3 py-2 text-sm font-medium text-muted-foreground hover:text-primary"
               >
                 {t(item.key)}
-              </button>
+              </Button>
             </li>
           ))}
         </ul>
@@ -97,7 +99,7 @@ const Navbar = () => {
             asChild
             variant="default"
             size="sm"
-            className="hidden sm:inline-flex gap-2"
+            className="hidden sm:inline-flex gap-2 rounded-sm bg-primary text-primary-foreground hover:bg-primary-glow"
           >
             <a href="/Mi_Mi_Khaing_Lin_CV_Final.pdf" download>
               <Download className="h-4 w-4" />
@@ -126,12 +128,13 @@ const Navbar = () => {
           <ul className="container py-4 flex flex-col gap-1">
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
-                <button
+                <Button
+                  variant="ghost"
                   onClick={() => handleNav(item.id)}
-                  className="w-full text-left px-3 py-3 text-base font-medium text-foreground hover:bg-secondary rounded-md transition-smooth"
+                  className="w-full justify-start px-3 py-3 text-base font-medium text-foreground hover:bg-secondary hover:text-primary rounded-sm"
                 >
                   {t(item.key)}
-                </button>
+                </Button>
               </li>
             ))}
             <li className="sm:hidden pt-2">

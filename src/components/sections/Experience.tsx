@@ -30,8 +30,8 @@ const Experience = () => {
       <div className="container">
         <SectionHeading title={t("experience.title")} number="03" align="center" />
 
-        <div className="mt-16 max-w-4xl mx-auto">
-          <ol className="divide-y divide-border border-y border-border">
+        <div className="mt-14 max-w-5xl mx-auto">
+          <ol className="border-t-2 border-foreground">
             {items.map((item, i) => {
               const lines = item.desc.split("\n").map((l) => l.trim()).filter(Boolean);
               const lead = lines[0]?.startsWith("▹") ? null : lines[0];
@@ -39,17 +39,17 @@ const Experience = () => {
                 .filter((l) => l.startsWith("▹"))
                 .map((l) => l.replace(/^▹\s*/, ""));
               return (
-                <li key={i} className="group grid md:grid-cols-[180px_1fr] gap-4 md:gap-10 py-8 transition-colors hover:bg-secondary/30 px-2 md:px-4 -mx-2 md:-mx-4 rounded-lg">
+                <li key={i} className="group grid md:grid-cols-[200px_1fr] gap-5 md:gap-12 py-9 border-b border-border transition-colors hover:bg-secondary/50 px-3 md:px-5">
                   <div className="md:pt-1">
-                    <div className="text-xs font-mono uppercase tracking-[0.18em] text-primary-glow">
+                    <div className="text-sm font-semibold text-primary">
                       {item.date}
                     </div>
-                    <div className="mt-2 h-px w-10 bg-primary/60 group-hover:w-16 transition-all" />
+                    <div className="mt-3 h-0.5 w-10 bg-primary group-hover:w-16 transition-all" />
                   </div>
                   <div>
-                    <h3 className="font-display text-lg md:text-xl font-semibold tracking-tight">
+                    <h3 className="font-display text-xl md:text-2xl font-semibold">
                       {item.role}
-                      <span className="text-primary"> @ {item.company}</span>
+                      <span className="text-navy dark:text-primary"> @ {item.company}</span>
                     </h3>
                     {lead && (
                       <p className="mt-3 text-muted-foreground leading-relaxed">{lead}</p>

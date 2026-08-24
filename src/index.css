@@ -2,31 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design system — Navy / Black / White portfolio. All colors HSL. */
+/* Design system — precise navy, ink, white, and orange. All colors HSL. */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222 47% 6%;
+    --foreground: 220 43% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 6%;
+    --card-foreground: 220 43% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 6%;
+    --popover-foreground: 220 43% 11%;
 
-    /* Navy as primary */
-    --primary: 222 65% 18%;
+    --primary: 18 100% 58%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 222 70% 32%;
+    --primary-glow: 18 100% 52%;
+    --navy: 216 64% 26%;
+    --navy-foreground: 0 0% 100%;
 
     --secondary: 210 20% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary-foreground: 220 43% 11%;
 
     --muted: 210 20% 96%;
     --muted-foreground: 215 16% 40%;
 
-    --accent: 222 65% 18%;
+    --accent: 216 64% 26%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 50%;
@@ -34,15 +35,15 @@
 
     --border: 220 14% 90%;
     --input: 220 14% 90%;
-    --ring: 222 65% 18%;
+    --ring: 18 100% 58%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
-    --gradient-hero: linear-gradient(135deg, hsl(222 65% 18%) 0%, hsl(222 70% 32%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(220 43% 11%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
-    --shadow-soft: 0 10px 40px -15px hsl(222 65% 18% / 0.18);
-    --shadow-glow: 0 0 60px -10px hsl(222 70% 32% / 0.35);
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-soft: 0 18px 45px -30px hsl(var(--navy) / 0.28);
+    --shadow-glow: 0 20px 55px -30px hsl(var(--primary) / 0.42);
+    --transition-smooth: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -64,9 +65,11 @@
     --popover: 222 40% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 222 47% 6%;
-    --primary-glow: 222 70% 55%;
+    --primary: 18 100% 62%;
+    --primary-foreground: 220 43% 8%;
+    --primary-glow: 18 100% 68%;
+    --navy: 215 55% 48%;
+    --navy-foreground: 0 0% 100%;
 
     --secondary: 222 30% 14%;
     --secondary-foreground: 0 0% 98%;
@@ -74,7 +77,7 @@
     --muted: 222 30% 14%;
     --muted-foreground: 215 20% 70%;
 
-    --accent: 222 70% 50%;
+    --accent: 215 55% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 45%;
@@ -82,12 +85,12 @@
 
     --border: 222 30% 16%;
     --input: 222 30% 16%;
-    --ring: 222 70% 55%;
+    --ring: 18 100% 62%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(222 70% 35%) 0%, hsl(222 80% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(216 64% 26%) 0%, hsl(220 43% 11%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(222 47% 5%) 0%, hsl(222 47% 7%) 100%);
     --shadow-soft: 0 10px 40px -15px hsl(0 0% 0% / 0.5);
-    --shadow-glow: 0 0 60px -10px hsl(222 80% 55% / 0.4);
+    --shadow-glow: 0 20px 55px -30px hsl(var(--primary) / 0.42);
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -114,10 +117,14 @@
     font-feature-settings: "ss01", "cv11";
   }
 
+  h1, h2, h3, h4 {
+    letter-spacing: 0;
+  }
+
   .lang-mm body,
   .lang-mm .font-display,
   .lang-mm .font-sans {
-    font-family: 'Padauk', 'Inter', system-ui, sans-serif;
+    font-family: 'Padauk', 'DM Sans', system-ui, sans-serif;
   }
 
   ::selection {
@@ -143,6 +150,16 @@
   }
   .animate-fade-in {
     animation: fade-in 0.8s ease-out both;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-up,
+    .animate-fade-in {
+      animation: none;
+    }
+    .transition-smooth {
+      transition: none;
+    }
   }
 
   @keyframes fade-up {
