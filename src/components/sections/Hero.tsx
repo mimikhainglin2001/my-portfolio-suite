@@ -12,25 +12,21 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden bg-gradient-subtle"
+      className="relative min-h-[calc(100svh-5rem)] flex items-center pt-28 pb-16 overflow-hidden bg-background"
     >
-      {/* Decorative orbs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 rounded-full bg-primary-glow/10 blur-3xl pointer-events-none" />
-
-      <div className="container relative grid lg:grid-cols-[1.5fr_1fr] gap-6 lg:gap-10 items-center">
+      <div className="container relative grid lg:grid-cols-[1.35fr_0.65fr] gap-10 lg:gap-14 items-center">
         <div className="space-y-7 animate-fade-up">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary border border-border text-xs font-medium uppercase tracking-wider text-muted-foreground">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary-glow animate-pulse" />
+          <span className="inline-flex items-center gap-2 border-l-2 border-primary pl-3 text-xs font-semibold uppercase text-muted-foreground">
+            <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
             Available for new projects
           </span>
 
           <div className="space-y-3">
-            <p className="text-lg text-muted-foreground font-medium">{t("hero.greeting")}</p>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
+            <p className="text-lg font-semibold text-primary">{t("hero.greeting")}</p>
+            <h1 className="font-display text-5xl md:text-7xl lg:text-[5.25rem] font-bold leading-[0.98]">
               {t("hero.name")}
             </h1>
-            <p className="text-2xl md:text-3xl font-light text-gradient">
+            <p className="font-display text-2xl md:text-4xl font-semibold text-navy dark:text-primary">
               {t("hero.role")}
             </p>
           </div>
@@ -40,11 +36,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-3 pt-2">
-            <Button size="lg" onClick={() => scrollTo("projects")} className="gap-2 shadow-soft">
+            <Button size="lg" onClick={() => scrollTo("projects")} className="gap-2 rounded-md shadow-none">
               {t("hero.cta.work")}
               <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" onClick={() => scrollTo("contact")} className="gap-2">
+            <Button size="lg" variant="outline" onClick={() => scrollTo("contact")} className="gap-2 rounded-md border-navy text-navy hover:bg-navy hover:text-navy-foreground dark:border-foreground dark:text-foreground">
               <Mail className="h-4 w-4" />
               {t("hero.cta.contact")}
             </Button>
@@ -52,10 +48,10 @@ const Hero = () => {
         </div>
 
         <div className="relative flex justify-center lg:justify-end animate-fade-in">
-          <div className="relative w-full max-w-sm lg:max-w-xs">
-            <div className="absolute inset-0 bg-gradient-hero rounded-[2rem] blur-3xl opacity-20 scale-90" />
-            <div className="relative w-full rounded-[2rem] bg-gradient-hero p-1 shadow-glow">
-              <div className="rounded-[1.75rem] bg-background overflow-hidden">
+          <div className="relative w-full max-w-[18rem] lg:max-w-[19rem]">
+            <div className="absolute -bottom-4 -right-4 h-full w-full rounded-md border-2 border-primary" />
+            <div className="relative w-full rounded-md border-2 border-navy bg-background p-1.5 dark:border-foreground">
+              <div className="rounded-sm bg-background overflow-hidden">
                 <img
                   src={portrait}
                   alt="Portrait of Mi Mi Khaing Lin"

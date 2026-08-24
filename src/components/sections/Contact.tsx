@@ -73,21 +73,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact" className="py-24 bg-navy text-navy-foreground dark:bg-secondary">
       <div className="container">
         <SectionHeading
           eyebrow={t("contact.subtitle")}
           title={t("contact.title")}
         />
 
-        <div className="mt-12 max-w-2xl mx-auto">
+        <div className="mt-14 max-w-3xl mx-auto">
           <form
             onSubmit={handleSubmit}
-            className="p-6 md:p-8 rounded-2xl bg-card border border-border shadow-soft space-y-5"
+            className="space-y-7"
           >
             {/* Name */}
             <div className="space-y-2">
-              <Label htmlFor="name">{t("contact.name")}</Label>
+              <Label htmlFor="name" className="text-navy-foreground">{t("contact.name")}</Label>
 
               <Input
                 id="name"
@@ -101,12 +101,13 @@ const Contact = () => {
                 }
                 maxLength={100}
                 required
+                className="h-12 rounded-sm border-navy-foreground/30 bg-navy-foreground/5 text-navy-foreground focus-visible:ring-primary"
               />
             </div>
 
             {/* Email */}
             <div className="space-y-2">
-              <Label htmlFor="email">{t("contact.email")}</Label>
+              <Label htmlFor="email" className="text-navy-foreground">{t("contact.email")}</Label>
 
               <Input
                 id="email"
@@ -120,12 +121,13 @@ const Contact = () => {
                 }
                 maxLength={255}
                 required
+                className="h-12 rounded-sm border-navy-foreground/30 bg-navy-foreground/5 text-navy-foreground focus-visible:ring-primary"
               />
             </div>
 
             {/* Message */}
             <div className="space-y-2">
-              <Label htmlFor="message">{t("contact.message")}</Label>
+              <Label htmlFor="message" className="text-navy-foreground">{t("contact.message")}</Label>
 
               <Textarea
                 id="message"
@@ -139,6 +141,7 @@ const Contact = () => {
                 }
                 maxLength={1000}
                 required
+                className="rounded-sm border-navy-foreground/30 bg-navy-foreground/5 text-navy-foreground focus-visible:ring-primary"
               />
             </div>
 
@@ -147,7 +150,7 @@ const Contact = () => {
               type="submit"
               size="lg"
               disabled={loading}
-              className="w-full gap-2"
+              className="w-full gap-2 rounded-sm"
             >
               <Send className="h-4 w-4" />
 

@@ -76,18 +76,18 @@ const Skills = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="skills" className="py-24 bg-gradient-subtle">
+    <section ref={sectionRef} id="skills" className="py-24 bg-secondary/50">
       <div className="container">
         <SectionHeading title={t("skills.title")} number="02" align="center" />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px mt-14 border border-border bg-border">
           {groups.map(({ icon: Icon, title, items }) => (
             <div
               key={title}
-              className="group p-5 rounded-xl bg-card border border-border shadow-soft hover:shadow-glow hover:-translate-y-1 transition-smooth"
+              className="group p-6 bg-card hover:bg-background transition-smooth"
             >
               <div className="flex items-center gap-2.5 mb-4">
-                <div className="inline-flex p-2 rounded-lg bg-primary text-primary-foreground group-hover:scale-110 transition-smooth">
+                <div className="inline-flex p-2 rounded-md bg-navy text-navy-foreground group-hover:bg-primary transition-smooth">
                   <Icon className="h-4 w-4" />
                 </div>
                 <h3 className="font-display text-base font-semibold">{title}</h3>
@@ -104,9 +104,9 @@ const Skills = () => {
                         {skill.level}%
                       </span>
                     </div>
-                    <div className="h-1.5 w-full overflow-hidden rounded-full bg-secondary">
+                    <div className="h-1 w-full overflow-hidden bg-secondary">
                       <div
-                        className="h-full rounded-full bg-primary transition-[width] duration-1000 ease-out"
+                        className="h-full bg-primary transition-[width] duration-1000 ease-out"
                         style={{
                           width: visible ? `${skill.level}%` : "0%",
                           transitionDelay: `${i * 100}ms`,
