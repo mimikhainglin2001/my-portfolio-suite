@@ -26,7 +26,7 @@ const Hero = () => {
             <h1 className="font-display text-5xl md:text-7xl lg:text-[5.25rem] font-bold leading-[0.98]">
               {t("hero.name")}
             </h1>
-            <p className="font-display text-2xl md:text-4xl font-semibold text-navy dark:text-primary">
+            <p className="font-display text-2xl md:text-4xl font-semibold text-navy">
               {t("hero.role")}
             </p>
           </div>
@@ -40,7 +40,7 @@ const Hero = () => {
               {t("hero.cta.work")}
               <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" onClick={() => scrollTo("contact")} className="gap-2 rounded-md border-navy text-navy hover:bg-navy hover:text-navy-foreground dark:border-foreground dark:text-foreground">
+            <Button size="lg" variant="outline" onClick={() => scrollTo("contact")} className="gap-2 rounded-md border-navy text-navy hover:bg-navy hover:text-navy-foreground">
               <Mail className="h-4 w-4" />
               {t("hero.cta.contact")}
             </Button>
