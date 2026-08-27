@@ -48,21 +48,17 @@ const Hero = () => {
         </div>
 
         <div className="relative flex justify-center lg:justify-end animate-fade-in">
-          <div className="relative w-full max-w-[18rem] lg:max-w-[19rem]">
-            <div className="absolute -bottom-4 -right-4 h-full w-full rounded-md border-2 border-primary" />
-            <div className="relative w-full rounded-md border-2 border-navy bg-background p-1.5 dark:border-foreground">
-              <div className="rounded-sm bg-background overflow-hidden">
-                <img
-                  src={portrait}
-                  alt="Portrait of Mi Mi Khaing Lin"
-                  width={960}
-                  height={1280}
-                  className="block w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
+          <figure className="relative w-full max-w-[16rem] sm:max-w-[18rem] lg:max-w-[19rem] overflow-hidden rounded-lg border border-border bg-card shadow-soft">
+            <img
+              src={portrait}
+              alt="Portrait of Mi Mi Khaing Lin"
+              width={960}
+              height={1280}
+              className="block w-full h-auto object-cover"
+            />
+          </figure>
         </div>
+
       </div>
     </section>
   );
