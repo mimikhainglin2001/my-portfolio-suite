@@ -27,9 +27,9 @@ const Hero = () => {
         <div className="absolute inset-0 dot-grid opacity-40" />
       </div>
 
-      <div className="container relative flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="container relative flex flex-col lg:flex-row items-center justify-between gap-14 lg:gap-20 py-8">
         {/* Text content */}
-        <div className="flex-1 lg:max-w-[660px] space-y-8 animate-fade-up">
+        <div className="flex-1 lg:max-w-[600px] space-y-8 animate-fade-up">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/50 px-4 py-1.5">
             <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
             <span className="text-[13px] font-medium text-muted-foreground">
@@ -61,7 +61,7 @@ const Hero = () => {
               "ASP.NET",
               "PHP",
               "React Native",
-              "Node.js",
+              
             ].map((tag) => (
               <span
                 key={tag}
