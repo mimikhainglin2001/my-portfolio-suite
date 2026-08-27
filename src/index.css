@@ -20,6 +20,8 @@
     --primary-glow: 18 100% 52%;
     --navy: 216 64% 26%;
     --navy-foreground: 0 0% 100%;
+    --navy-deep: 216 64% 22%;
+
 
     --secondary: 210 20% 96%;
     --secondary-foreground: 220 43% 11%;
@@ -70,6 +72,8 @@
     --primary-glow: 18 100% 68%;
     --navy: 215 55% 48%;
     --navy-foreground: 0 0% 100%;
+    --navy-deep: 222 45% 9%;
+
 
     --secondary: 222 30% 14%;
     --secondary-foreground: 0 0% 98%;

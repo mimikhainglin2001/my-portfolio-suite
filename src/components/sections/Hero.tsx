@@ -26,7 +26,7 @@ const Hero = () => {
             <h1 className="font-display text-5xl md:text-7xl lg:text-[5.25rem] font-bold leading-[0.98]">
               {t("hero.name")}
             </h1>
-            <p className="font-display text-2xl md:text-4xl font-semibold text-navy dark:text-primary">
+            <p className="font-display text-2xl md:text-4xl font-semibold text-navy">
               {t("hero.role")}
             </p>
           </div>
@@ -40,7 +40,7 @@ const Hero = () => {
               {t("hero.cta.work")}
               <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" onClick={() => scrollTo("contact")} className="gap-2 rounded-md border-navy text-navy hover:bg-navy hover:text-navy-foreground dark:border-foreground dark:text-foreground">
+            <Button size="lg" variant="outline" onClick={() => scrollTo("contact")} className="gap-2 rounded-md border-navy text-navy hover:bg-navy hover:text-navy-foreground">
               <Mail className="h-4 w-4" />
               {t("hero.cta.contact")}
             </Button>
@@ -48,21 +48,17 @@ const Hero = () => {
         </div>
 
         <div className="relative flex justify-center lg:justify-end animate-fade-in">
-          <div className="relative w-full max-w-[18rem] lg:max-w-[19rem]">
-            <div className="absolute -bottom-4 -right-4 h-full w-full rounded-md border-2 border-primary" />
-            <div className="relative w-full rounded-md border-2 border-navy bg-background p-1.5 dark:border-foreground">
-              <div className="rounded-sm bg-background overflow-hidden">
-                <img
-                  src={portrait}
-                  alt="Portrait of Mi Mi Khaing Lin"
-                  width={960}
-                  height={1280}
-                  className="block w-full h-auto"
-                />
-              </div>
-            </div>
-          </div>
+          <figure className="relative w-full max-w-[16rem] sm:max-w-[18rem] lg:max-w-[19rem] overflow-hidden rounded-lg border border-border bg-card shadow-soft">
+            <img
+              src={portrait}
+              alt="Portrait of Mi Mi Khaing Lin"
+              width={960}
+              height={1280}
+              className="block w-full h-auto object-cover"
+            />
+          </figure>
         </div>
+
       </div>
     </section>
   );

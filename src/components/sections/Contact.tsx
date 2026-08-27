@@ -73,7 +73,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-navy text-navy-foreground dark:bg-secondary">
+    <section id="contact" className="py-24 bg-navy-deep text-navy-foreground">
       <div className="container">
         <SectionHeading
           eyebrow={t("contact.subtitle")}

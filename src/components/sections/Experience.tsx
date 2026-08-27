@@ -49,7 +49,7 @@ const Experience = () => {
                   <div>
                     <h3 className="font-display text-xl md:text-2xl font-semibold">
                       {item.role}
-                      <span className="text-navy dark:text-primary"> @ {item.company}</span>
+                      <span className="text-navy"> @ {item.company}</span>
                     </h3>
                     {lead && (
                       <p className="mt-3 text-muted-foreground leading-relaxed">{lead}</p>
