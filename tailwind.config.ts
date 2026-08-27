@@ -12,9 +12,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['DM Sans', 'system-ui', 'sans-serif'],
-        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
-        mm: ['Padauk', 'DM Sans', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Sora', 'system-ui', 'sans-serif'],
+        mm: ['Padauk', 'Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -76,10 +76,14 @@ export default {
       keyframes: {
         "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
         "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
+        "pulse-slow": { "0%, 100%": { opacity: "0.4", transform: "scale(1)" }, "50%": { opacity: "0.6", transform: "scale(1.05)" } },
+        "float-delayed": { "0%, 100%": { opacity: "0.3", transform: "translate(0, 0)" }, "33%": { opacity: "0.5", transform: "translate(10px, -15px)" }, "66%": { opacity: "0.4", transform: "translate(-5px, 10px)" } },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "pulse-slow": "pulse-slow 6s ease-in-out infinite",
+        "float-delayed": "float-delayed 8s ease-in-out infinite",
       },
     },
   },

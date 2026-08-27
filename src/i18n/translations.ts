@@ -7,6 +7,7 @@ export const translations = {
     "nav.about": "About",
     "nav.skills": "Skills",
     "nav.experience": "Experience",
+    "nav.education": "Education",
     "nav.projects": "Projects",
     "nav.contact": "Contact",
     "nav.resume": "Resume",
@@ -33,6 +34,18 @@ export const translations = {
     "about.frontend": "Frontend",
     "about.backend": "Backend",
     "about.database": "Database",
+
+    // Education
+    "education.title": "Education",
+    "education.subtitle": "Academic Foundation",
+    "education.degree1": "Bachelor of Computer Science (B.C.Sc)",
+    "education.school1": "University of Computer Studies, Meiktila (UCSMTLA)",
+    "education.date1": "2019 — 2025",
+    "education.desc1": "Focused on software engineering, data structures, algorithms, and web development. Graduated with strong foundations in both theoretical and practical computer science.",
+    // "education.degree2": "Higher National Diploma in IT",
+    // "education.school2": "Yangon Technical Education Institute",
+    // "education.date2": "2019 — 2021",
+    // "education.desc2": "Specialized in information technology with coursework in programming, networking, and database management.",
 
     // Skills
     "skills.title": "Skills & Tools",
@@ -99,6 +112,7 @@ export const translations = {
     "nav.about": "အကြောင်း",
     "nav.skills": "ကျွမ်းကျင်မှု",
     "nav.experience": "အတွေ့အကြုံ",
+    "nav.education": "ပညာရေး",
     "nav.projects": "လုပ်ငန်းများ",
     "nav.contact": "ဆက်သွယ်ရန်",
     "nav.resume": "ကိုယ်ရေးရာဇဝင်",
@@ -125,6 +139,18 @@ export const translations = {
     "about.frontend": "Frontend",
     "about.backend": "Backend",
     "about.database": "Database",
+
+    // Education
+    "education.title": "ပညာရေး",
+    "education.subtitle": "ပညာရေး အခြေခံ",
+    "education.degree1": "Computer Science ဘွဲ့",
+    "education.school1": "University of Computer Studies, Yangon",
+    "education.date1": "၂၀၂၁ — ၂၀၂၅",
+    "education.desc1": "Software engineering, data structures, algorithms နှင့် web development တွင် အဓိက အာရုံစိုက်ခဲ့သည်။",
+    "education.degree2": "Higher National Diploma in IT",
+    "education.school2": "Yangon Technical Education Institute",
+    "education.date2": "၂၀၁၉ — ၂၀၂၁",
+    "education.desc2": "Programming, networking နှင့် database management သင်ခန်းစာများဖြင့် IT တွင် အထူးပြုခဲ့သည်။",
 
     // Skills
     "skills.title": "ကျွမ်းကျင်မှုများ",

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Github, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SectionHeading from "@/components/SectionHeading";
@@ -8,25 +9,20 @@ import p4 from "@/assets/project-4.png";
 import p5 from "@/assets/project-5.png";
 import p6 from "@/assets/project-6.png";
 
+const FILTERS = ["All", "Web", "Mobile", "Enterprise"] as const;
+type Filter = (typeof FILTERS)[number];
+
 const Projects = () => {
   const { t } = useLanguage();
+  const [active, setActive] = useState<Filter>("All");
 
   const projects = [
     {
       img: p1,
       title: t("projects.p1.title"),
       desc: t("projects.p1.desc"),
-      tags: [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "Bootstrap",
-        "Tailwind",
-        "PHP",
-        "MySQL",
-        "Docker",
-        "GitHub",
-      ],
+      category: "Web",
+      tags: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Tailwind", "PHP", "MySQL", "Docker"],
       repo: "#",
       demo: null,
     },
@@ -34,19 +30,8 @@ const Projects = () => {
       img: p2,
       title: t("projects.p2.title"),
       desc: t("projects.p2.desc"),
-      tags: [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "Bootstrap",
-        "Tailwind",
-        "PHP",
-        "Laravel",
-        "MySQL",
-        "Redis",
-        "Docker",
-        "GitHub",
-      ],
+      category: "Web",
+      tags: ["Laravel", "PHP", "MySQL", "Redis", "Docker"],
       repo: "#",
       demo: "https://itvisionsoft.com/",
     },
@@ -54,6 +39,7 @@ const Projects = () => {
       img: p3,
       title: t("projects.p3.title"),
       desc: t("projects.p3.desc"),
+      category: "Enterprise",
       tags: ["ASP.NET", "MSSQL", "GitHub"],
       repo: "#",
       demo: null,
@@ -62,13 +48,8 @@ const Projects = () => {
       img: p4,
       title: t("projects.p4.title"),
       desc: t("projects.p4.desc"),
-      tags: [
-        "React Native",
-        "JavaScript",
-        "Redux",
-        "API Integration",
-        "AppWrite",
-      ],
+      category: "Mobile",
+      tags: ["React Native", "Redux", "AppWrite"],
       repo: "#",
       demo: null,
     },
@@ -76,7 +57,8 @@ const Projects = () => {
       img: p5,
       title: t("projects.p5.title"),
       desc: t("projects.p5.desc"),
-      tags: ["React Native", "JavaScript", "TMDB API", "Redux"],
+      category: "Mobile",
+      tags: ["React Native", "TMDB API", "Redux"],
       repo: "#",
       demo: null,
     },
@@ -84,49 +66,67 @@ const Projects = () => {
       img: p6,
       title: t("projects.p6.title"),
       desc: t("projects.p6.desc"),
-      tags: ["React Native", "JavaScript", "Maps API", "AppWrite"],
+      category: "Mobile",
+      tags: ["React Native", "Maps API", "AppWrite"],
       repo: "#",
       demo: null,
     },
   ];
 
-  return (
-    <section id="projects" className="py-24 bg-secondary/50">
-      <div className="container">
-        <SectionHeading
-          title={t("projects.title")}
-          number="04"
-          align="center"
-        />
+  const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
-          {projects.map((project) => (
+  return (
+    <section id="projects" className="section-padding bg-secondary/30">
+      <div className="container">
+        <SectionHeading title={t("projects.title")} number="05" />
+
+        {/* Filter buttons */}
+        <div className="flex flex-wrap justify-center gap-2 mt-10">
+          {FILTERS.map((f) => (
+            <button
+              key={f}
+              onClick={() => setActive(f)}
+              className={`rounded-lg border px-3 py-1.5 text-[14px] font-medium transition-smooth ${
+                active === f
+                  ? "border-primary bg-primary text-primary-foreground"
+                  : "border-border text-muted-foreground hover:text-foreground hover:border-primary/25"
+              }`}
+            >
+              {f}
+            </button>
+          ))}
+        </div>
+
+        {/* Project grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+          {filtered.map((project) => (
             <article
               key={project.title}
-              className="group rounded-md overflow-hidden bg-card border border-border hover:border-primary transition-smooth"
+              className="group rounded-xl border border-border bg-card overflow-hidden transition-smooth hover:border-primary/20 hover:shadow-[0_12px_40px_-12px_hsl(var(--glow)/0.12)]"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-secondary border-b border-border">
+              <div className="aspect-[16/10] overflow-hidden bg-muted">
                 <img
                   src={project.img}
                   alt={project.title}
                   loading="lazy"
                   width={1024}
                   height={640}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-smooth"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-smooth"
                 />
               </div>
-              <div className="p-6 space-y-3">
-                <h3 className="font-display text-xl font-semibold">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+              <div className="p-5 space-y-3">
+                <span className="text-[12px] font-medium uppercase tracking-[0.15em] text-primary">
+                  {project.category}
+                </span>
+                <h3 className="text-[17px] font-semibold">{project.title}</h3>
+                <p className="text-[15px] text-muted-foreground leading-[1.65]">
                   {project.desc}
                 </p>
-                <div className="flex flex-wrap gap-2 pt-1">
+                <div className="flex flex-wrap gap-1.5 pt-1">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                    className="text-xs px-2.5 py-1 rounded-sm bg-secondary text-secondary-foreground border border-border"
+                      className="rounded border border-border bg-secondary/50 px-2 py-0.5 text-[13px] font-mono text-muted-foreground"
                     >
                       {tag}
                     </span>
@@ -138,10 +138,10 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${project.title} source code`}
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground hover:text-primary transition-smooth"
+                    className="inline-flex items-center gap-1.5 text-[14px] font-medium text-muted-foreground hover:text-primary transition-smooth"
                   >
                     <Github className="h-4 w-4" />
-                    <span>Code</span>
+                    Code
                   </a>
                   {project.demo && (
                     <a
@@ -149,10 +149,10 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`${project.title} live demo`}
-                      className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:text-primary-glow transition-smooth"
+                      className="inline-flex items-center gap-1.5 text-[14px] font-medium text-primary hover:text-primary-glow transition-smooth"
                     >
                       <ExternalLink className="h-4 w-4" />
-                      <span>Live Demo</span>
+                      Live Demo
                     </a>
                   )}
                 </div>

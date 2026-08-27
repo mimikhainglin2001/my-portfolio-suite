@@ -6,24 +6,23 @@ interface Props {
 }
 
 const SectionHeading = ({ eyebrow, title, align = "center", number }: Props) => (
-  <div className={align === "center" ? "text-center max-w-4xl mx-auto" : ""}>
-    {eyebrow && (
-      <p className="text-sm font-semibold text-primary">
-        {eyebrow}
-      </p>
-    )}
-    <div className={`flex items-end gap-5 ${eyebrow ? "mt-4" : ""}`}>
-      {align === "center" && <div className="mb-2 h-px bg-border flex-1" />}
-      <h2 className={`font-display text-3xl md:text-5xl font-bold flex items-baseline gap-3 ${align === "center" ? "justify-center flex-shrink-0" : ""}`}>
-        {number && (
-          <span className="text-primary text-sm md:text-base font-semibold leading-none">
-            {number}.
-          </span>
-        )}
-        <span className="leading-[0.95]">{title}</span>
-      </h2>
-      <div className="mb-2 h-px bg-border flex-1" />
+  <div className={align === "center" ? "text-center" : ""}>
+    <div className={`flex items-center gap-3 ${align === "center" ? "justify-center" : ""}`}>
+      {number && (
+        <span className="text-[14px] font-medium uppercase tracking-[0.15em] text-primary">
+          {number}.
+        </span>
+      )}
+      {eyebrow && (
+        <span className="text-[14px] font-medium uppercase tracking-[0.15em] text-primary">
+          {eyebrow}
+        </span>
+      )}
+      <div className="h-px flex-1 max-w-[100px] bg-primary/30" />
     </div>
+    <h2 className={`mt-3 text-heading-hero font-display ${align === "center" ? "" : ""}`}>
+      {title}
+    </h2>
   </div>
 );
 

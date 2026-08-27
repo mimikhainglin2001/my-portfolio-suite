@@ -36,7 +36,7 @@ const Skills = () => {
         { name: "JavaScript", level: 85 },
         { name: "React", level: 85 },
         { name: "React Native", level: 95 },
-        { name: "Tailwind", level: 90 },
+        { name: "Tailwind CSS", level: 90 },
         { name: "Bootstrap 5", level: 85 },
       ],
     },
@@ -76,37 +76,37 @@ const Skills = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="skills" className="py-24 bg-secondary/50">
+    <section ref={sectionRef} id="skills" className="section-padding bg-secondary/30">
       <div className="container">
-        <SectionHeading title={t("skills.title")} number="02" align="center" />
+        <SectionHeading title={t("skills.title")} number="02" />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px mt-14 border border-border bg-border">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-12">
           {groups.map(({ icon: Icon, title, items }) => (
             <div
               key={title}
-              className="group p-6 bg-card hover:bg-background transition-smooth"
+              className="group rounded-xl border border-border bg-card p-5 transition-smooth hover:border-primary/20 hover:shadow-[0_12px_40px_-12px_hsl(var(--glow)/0.08)]"
             >
-              <div className="flex items-center gap-2.5 mb-4">
-                <div className="inline-flex p-2 rounded-md bg-navy text-navy-foreground group-hover:bg-primary transition-smooth">
+              <div className="flex items-center gap-2.5 mb-5">
+                <div className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-primary/[0.08] text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-smooth">
                   <Icon className="h-4 w-4" />
                 </div>
-                <h3 className="font-display text-base font-semibold">{title}</h3>
+                <h3 className="text-[15px] font-semibold">{title}</h3>
               </div>
 
-              <ul className="space-y-3">
+              <ul className="space-y-3.5">
                 {items.map((skill, i) => (
                   <li key={skill.name}>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs font-medium text-foreground">
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-[13px] font-medium text-foreground">
                         {skill.name}
                       </span>
-                      <span className="text-[10px] font-semibold text-muted-foreground tabular-nums">
+                      <span className="text-[11px] font-semibold text-muted-foreground tabular-nums">
                         {skill.level}%
                       </span>
                     </div>
-                    <div className="h-1 w-full overflow-hidden bg-secondary">
+                    <div className="h-1.5 w-full overflow-hidden bg-secondary rounded-full">
                       <div
-                        className="h-full bg-primary transition-[width] duration-1000 ease-out"
+                        className="h-full bg-gradient-to-r from-primary to-primary-glow rounded-full transition-[width] duration-1000 ease-out"
                         style={{
                           width: visible ? `${skill.level}%` : "0%",
                           transitionDelay: `${i * 100}ms`,
