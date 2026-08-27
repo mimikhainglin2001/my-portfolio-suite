@@ -47,6 +47,7 @@ const About = () => {
           <div className="text-center max-w-2xl mx-auto space-y-5 text-[17px] leading-[1.75] text-muted-foreground">
             <p>{t("about.p1")}</p>
             <p>{t("about.p2")}</p>
+            <p>{t("about.p3")}</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

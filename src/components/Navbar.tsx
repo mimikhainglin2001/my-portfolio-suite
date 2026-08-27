@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { id: "about", key: "nav.about" as const },
   { id: "skills", key: "nav.skills" as const },
   { id: "experience", key: "nav.experience" as const },
+  { id: "whyme", key: "nav.whyme" as const },
   { id: "education", key: "nav.education" as const },
   { id: "projects", key: "nav.projects" as const },
   { id: "contact", key: "nav.contact" as const },

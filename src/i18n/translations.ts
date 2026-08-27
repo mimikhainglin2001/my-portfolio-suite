@@ -7,6 +7,7 @@ export const translations = {
     "nav.about": "About",
     "nav.skills": "Skills",
     "nav.experience": "Experience",
+    "nav.whyme": "Why Me",
     "nav.education": "Education",
     "nav.projects": "Projects",
     "nav.contact": "Contact",
@@ -23,8 +24,9 @@ export const translations = {
     // About
     "about.title": "About Me",
     "about.subtitle": "A short story",
-    "about.p1": "Hello! I'm a passionate full-stack developer with 2+ years of experience crafting digital solutions. I enjoy turning complex problems into simple, beautiful, and intuitive applications.",
-    "about.p2": "My journey in web development started back in college when I decided to build a custom CMS — turns out hacking together a website taught me a lot about HTML & CSS. Since then, I've had the privilege of working across startups and established companies.",
+    "about.p1": "Hello! I'm a full-stack developer with 2+ years of professional experience building responsive, user-focused web applications and digital solutions. I enjoy turning complex requirements into clean, intuitive, and maintainable products, with a strong focus on both user experience and reliable functionality.",
+    "about.p2": "My journey into web development began during college, where I started building websites and exploring how technology could turn ideas into practical solutions. That curiosity grew into a career in software development, giving me the opportunity to work across different projects and collaborate with both startups and established teams. Along the way, I've continued to strengthen my skills across the full development lifecycle—from designing and developing interfaces to building backend services, integrating APIs, and delivering scalable applications.",
+    "about.p3": "I'm always interested in learning new technologies, solving challenging problems, and building products that are both technically sound and genuinely useful.",
     "about.location": "Based in",
     "about.locationValue": "Yangon, Myanmar",
     "about.experience": "Experience",
@@ -34,6 +36,16 @@ export const translations = {
     "about.frontend": "Frontend",
     "about.backend": "Backend",
     "about.database": "Database",
+
+    // Why Me
+    "whyme.title": "Why Me",
+    "whyme.subtitle": "How I show up for teams and projects.",
+    "whyme.r1.title": "Full-Stack Versatility",
+    "whyme.r1.desc": "I work across the entire stack — from pixel-perfect React frontends to scalable Laravel and ASP.NET backends. No handoffs, no bottlenecks.",
+    "whyme.r2.title": "Shipped Products, Not Just Code",
+    "whyme.r2.desc": "2+ years building production apps used by real users. I think in terms of business impact, not just pull requests.",
+    "whyme.r3.title": "Bilingual & Cross-Cultural",
+    "whyme.r3.desc": "Fluent in English and Myanmar, I bridge communication gaps between international teams and local stakeholders effortlessly.",
 
     // Education
     "education.title": "Education",
@@ -112,6 +124,7 @@ export const translations = {
     "nav.about": "အကြောင်း",
     "nav.skills": "ကျွမ်းကျင်မှု",
     "nav.experience": "အတွေ့အကြုံ",
+    "nav.whyme": "ဘာကြောင့်",
     "nav.education": "ပညာရေး",
     "nav.projects": "လုပ်ငန်းများ",
     "nav.contact": "ဆက်သွယ်ရန်",
@@ -128,8 +141,9 @@ export const translations = {
     // About
     "about.title": "ကျွန်တော့်အကြောင်း",
     "about.subtitle": "အတိုချုံ့",
-    "about.p1": "မင်္ဂလာပါ! digital solutions များ ဖန်တီးရာတွင် ၂ နှစ်ကျော်အတွေ့အကြုံရှိသော စိတ်အားထက်သန်သော full-stack developer တစ်ဦးဖြစ်ပါသည်။ ရှုပ်ထွေးသော ပြဿနာများကို ရိုးရှင်းလှပ၍ အသုံးပြုရလွယ်ကူသော applications များအဖြစ် ပြောင်းလဲပေးခြင်းကို နှစ်သက်ပါသည်။",
-    "about.p2": "ကျွန်တော်၏ web development ခရီးသည် college အချိန်က စတင်ခဲ့ပြီး custom CMS တစ်ခု တည်ဆောက်ရန် ဆုံးဖြတ်ခဲ့သည် — ဝဘ်ဆိုဒ်တစ်ခု ပေါင်းစပ်တည်ဆောက်ခြင်းသည် HTML နှင့် CSS အကြောင်း အများကြီး သင်ယူစေခဲ့သည်။ ထိုအချိန်မှစ၍ startups နှင့် အသက်သွင်းထားသော ကုမ္ပဏီများတွင် အလုပ်လုပ်ခွင့် ရရှိခဲ့ပါသည်။",
+    "about.p1": "Responsive, user-focused web applications နှင့် digital solutions များ တည်ဆောက်ခြင်းတွင် ၂ နှစ်ကျော် အတွေ့အကြုံရှိသော full-stack developer တစ်ဦးဖြစ်ပါသည်။ Clean, intuitive နှင့် maintainable products များအဖြစ် ပြောင်းလဲရာတွင် နှစ်သက်ပါသည်။",
+    "about.p2": "College အချိန်က ဝဘ်ဆိုဒ်များ တည်ဆောက်ခြင်းဖြင့် စတင်ခဲ့ပြီး startups နှင့် အထောက်အထားရှိသော အဖွဲ့များနှင့် ပူးပေါင်းလုပ်ဆောင်ခွင့် ရရှိခဲ့ပါသည်။ Frontend မှ Backend အထိ full development lifecycle တစ်လျှောက် ကျွမ်းကျင်မှုများကို ဆက်လက်တိုးတက်အောင် လုပ်ဆောင်နေပါသည်။",
+    "about.p3": "နည်းပညာအသစ်များ သင်ယူခြင်း၊ စိန်ခေါ်မှုများ ဖြေရှင်းခြင်းနှင့် နည်းပညာအရ ခိုင်မာပြီး အသုံးဝင်သော products များ ဖန်တီးခြင်းကို အမြဲ စိတ်ဝင်စားပါသည်။",
     "about.location": "နေထိုင်ရာ",
     "about.locationValue": "ရန်ကုန်၊ မြန်မာ",
     "about.experience": "အတွေ့အကြုံ",
@@ -139,6 +153,16 @@ export const translations = {
     "about.frontend": "Frontend",
     "about.backend": "Backend",
     "about.database": "Database",
+
+    // Why Me
+    "whyme.title": "ဘာကြောင့် ကျွန်တော်",
+    "whyme.subtitle": "အဖွဲ့များနှင့် စီမံကိန်းများအတွက် ကျွန်တော် ဘယ်လို ပါဝင်ပါသလဲ။",
+    "whyme.r1.title": "Full-Stack စွမ်းဆောင်ရည်",
+    "whyme.r1.desc": "Frontend မှ Backend အထိ တစ်ဆက်တည်း လုပ်ဆောင်နိုင်သည်။ React frontend မှ ASP.NET backend အထိ ကိုယ်တိုင် တည်ဆောက်နိုင်သည်။",
+    "whyme.r2.title": "ထုတ်ကုန်များ ဖန်တီးခြင်း",
+    "whyme.r2.desc": "အသုံးပြုသူများ အမှန်တကယ် အသုံးပြုသည့် production apps များကို ၂ နှစ်ကျော် တည်ဆောက်ခဲ့သည်။",
+    "whyme.r3.title": "ဘာသာစကား နှစ်မျိုး ကျွမ်းကျင်မှု",
+    "whyme.r3.desc": "English နှင့် Myanmar ဘာသာစကား နှစ်မျိုးစလုံး ကျွမ်းကျင်ပြီး နိုင်ငံတကာ အဖွဲ့များနှင့် ဆက်သွယ်ရေးကို အဆင်ပြေစွာ ဖြစ်စေသည်။",
 
     // Education
     "education.title": "ပညာရေး",

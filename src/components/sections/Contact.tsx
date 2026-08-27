@@ -98,7 +98,7 @@ const Contact = () => {
       </div>
 
       <div className="container relative">
-        <SectionHeading title={t("contact.title")} number="06" />
+        <SectionHeading title={t("contact.title")} number="07" />
 
         <div className="mt-12 grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Contact channels */}

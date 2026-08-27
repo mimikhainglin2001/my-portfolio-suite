@@ -78,7 +78,7 @@ const Projects = () => {
   return (
     <section id="projects" className="section-padding bg-secondary/30">
       <div className="container">
-        <SectionHeading title={t("projects.title")} number="05" />
+        <SectionHeading title={t("projects.title")} number="06" />
 
         {/* Filter buttons */}
         <div className="flex flex-wrap justify-center gap-2 mt-10">

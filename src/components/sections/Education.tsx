@@ -8,7 +8,7 @@ const Education = () => {
   return (
     <section id="education" className="section-padding bg-secondary/30">
       <div className="container max-w-4xl">
-        <SectionHeading title={t("education.title")} number="04" />
+        <SectionHeading title={t("education.title")} number="05" />
 
         <div className="mt-12">
           <div className="rounded-xl border border-border bg-card p-6 transition-smooth hover:border-primary/20 hover:shadow-[0_12px_40px_-12px_hsl(var(--glow)/0.08)]">
