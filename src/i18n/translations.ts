@@ -100,6 +100,11 @@ export const translations = {
     "projects.p6.title": "Real Estate App",
     "projects.p6.desc": "A React Native real estate browsing app for exploring property listings with filters, maps, image galleries, and agent contact details — designed for a clean mobile-first experience.",
 
+    "projects.p7.title": "Support Ticket Portal",
+    "projects.p7.desc": "A helpdesk ticketing portal built with React and Laravel. Handles ticket creation, priority routing, agent assignment, SLA tracking, and threaded replies, with supervisor dashboards for response times and resolution rates.",
+    "projects.p8.title": "Daily Need Items",
+    "projects.p8.desc": "A daily-essentials ordering platform built on a microservices architecture. Independent catalog, inventory, order, payment, and delivery services scale separately behind a React frontend, keeping stock levels and checkout reliable during peak demand.",
+
     // Contact
     "contact.title": "Let's Work Together",
     "contact.subtitle": "Have a project in mind? Send me a message.",
@@ -216,6 +221,11 @@ export const translations = {
     "projects.p5.desc": "React Native ဖြင့် တည်ဆောက်ထားသော ရုပ်ရှင်ရှာဖွေမှု app ဖြစ်ပါသည်။ trending films များကြည့်ရှုခြင်း၊ အသေးစိတ်ကြည့်ရန်၊ trailer များကြည့်ခြင်းနှင့် ကိုယ်စားလှယ်စာရင်းပြုလုပ်ခြင်းများ ပါဝင်ပါသည်။",
     "projects.p6.title": "အိမ်ခြံမြေ App",
     "projects.p6.desc": "React Native ဖြင့် တည်ဆောက်ထားသော အိမ်ခြံမြေ listing များရှာဖွေမှု app ဖြစ်ပါသည်။ filters၊ maps၊ ပုံရိပ်များ နှင့် agent ဆက်သွယ်ရန် အချက်အလက်များပါဝင်သော mobile-first experience ဖြစ်ပါသည်။",
+
+    "projects.p7.title": "Support Ticket Portal",
+    "projects.p7.desc": "React နှင့် Laravel ဖြင့် တည်ဆောက်ထားသော helpdesk ticketing portal ဖြစ်ပါသည်။ ticket ဖွင့်လှစ်ခြင်း၊ priority ခွဲဝေခြင်း၊ agent တာဝန်ပေးခြင်း၊ SLA ခြေရာခံခြင်းနှင့် အဖြေပြန်ကြားခြင်းများကို ကိုင်တွယ်ပြီး၊ response time နှင့် resolution rate များစောင့်ကြည့်ရန် dashboard များ ပါဝင်ပါသည်။",
+    "projects.p8.title": "Daily Need Items",
+    "projects.p8.desc": "microservices architecture ဖြင့် တည်ဆောက်ထားသော နေ့စဉ်လိုအပ်သည့် ပစ္စည်းများ မှာယူသည့် platform ဖြစ်ပါသည်။ catalog၊ inventory၊ orders၊ payments၊ delivery ဝန်ဆောင်မှုများကို သီးခြားစီ ချဲ့ထွင်နိုင်ပြီး peak demand တွင်လည်း stock နှင့် checkout များ ယုံကြည်စိတ်ချရစေပါသည်။",
 
     // Contact
     "contact.title": "အတူတကွ လုပ်ကိုင်ကြရအောင်",

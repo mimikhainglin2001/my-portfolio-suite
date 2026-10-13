@@ -8,6 +8,8 @@ import p3 from "@/assets/project-3.png";
 import p4 from "@/assets/project-4.png";
 import p5 from "@/assets/project-5.png";
 import p6 from "@/assets/project-6.png";
+import p7 from "@/assets/project-7.png";
+import p8 from "@/assets/project-8.png";
 
 const FILTERS = ["All", "Web", "Mobile", "Enterprise"] as const;
 type Filter = (typeof FILTERS)[number];
@@ -68,6 +70,24 @@ const Projects = () => {
       desc: t("projects.p6.desc"),
       category: "Mobile",
       tags: ["React Native", "Maps API", "AppWrite"],
+      repo: "#",
+      demo: null,
+    },
+    {
+      img: p7,
+      title: t("projects.p7.title"),
+      desc: t("projects.p7.desc"),
+      category: "Web",
+      tags: ["React", "Laravel", "MySQL", "REST API", "Tailwind", "Docker"],
+      repo: "#",
+      demo: null,
+    },
+    {
+      img: p8,
+      title: t("projects.p8.title"),
+      desc: t("projects.p8.desc"),
+      category: "Enterprise",
+      tags: ["Microservices", "React", "Laravel", "MySQL", "Redis", "Docker"],
       repo: "#",
       demo: null,
     },
