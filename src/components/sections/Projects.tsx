@@ -9,7 +9,7 @@ import p4 from "@/assets/project-4.png";
 import p5 from "@/assets/project-5.png";
 import p6 from "@/assets/project-6.png";
 import p7 from "@/assets/project-7.png";
-import p8Asset from "@/assets/project-8.png.asset.json";
+import p8 from "@/assets/project-8.png";
 
 const FILTERS = ["All", "Web", "Mobile", "Enterprise"] as const;
 type Filter = (typeof FILTERS)[number];
@@ -83,7 +83,7 @@ const Projects = () => {
       demo: null,
     },
     {
-      img: p8Asset.url,
+      img: p8,
       title: t("projects.p8.title"),
       desc: t("projects.p8.desc"),
       category: "Enterprise",
