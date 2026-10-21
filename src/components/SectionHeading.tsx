@@ -5,25 +5,33 @@ interface Props {
   number?: string;
 }
 
-const SectionHeading = ({ eyebrow, title, align = "center", number }: Props) => (
-  <div className={align === "center" ? "text-center" : ""}>
-    <div className={`flex items-center gap-3 ${align === "center" ? "justify-center" : ""}`}>
-      {number && (
-        <span className="text-[14px] font-medium uppercase tracking-[0.15em] text-primary">
-          {number}.
-        </span>
-      )}
-      {eyebrow && (
-        <span className="text-[14px] font-medium uppercase tracking-[0.15em] text-primary">
-          {eyebrow}
-        </span>
-      )}
-      <div className="h-px flex-1 max-w-[100px] bg-primary/30" />
+const SectionHeading = ({ eyebrow, title, align = "left", number }: Props) => {
+  if (align === "center") {
+    return (
+      <div className="text-center">
+        {number && (
+          <p className="font-mono text-[15px] font-medium text-muted-foreground">
+            {number}. {eyebrow}
+          </p>
+        )}
+        <h2 className="mt-2 text-heading-hero font-display">{title}</h2>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex items-center gap-4">
+      <h2 className="flex items-baseline gap-3 text-heading-hero font-display whitespace-nowrap">
+        {number && (
+          <span className="font-mono text-lg md:text-xl font-medium text-foreground">
+            {number}.
+          </span>
+        )}
+        {title}
+      </h2>
+      <div className="h-px flex-1 bg-border" />
     </div>
-    <h2 className={`mt-3 text-heading-hero font-display ${align === "center" ? "" : ""}`}>
-      {title}
-    </h2>
-  </div>
-);
+  );
+};
 
 export default SectionHeading;
