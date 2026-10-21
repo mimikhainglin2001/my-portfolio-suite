@@ -229,7 +229,7 @@ export const translations = {
     "projects.p8.title": "Daily Need Items",
     "projects.p8.desc": "microservices architecture ဖြင့် တည်ဆောက်ထားသော နေ့စဉ်လိုအပ်သည့် ပစ္စည်းများ မှာယူသည့် platform ဖြစ်ပါသည်။ catalog၊ inventory၊ orders၊ payments၊ delivery ဝန်ဆောင်မှုများကို သီးခြားစီ ချဲ့ထွင်နိုင်ပြီး peak demand တွင်လည်း stock နှင့် checkout များ ယုံကြည်စိတ်ချရစေပါသည်။",
     "projects.p9.title": "Daily Need Items App",
-    "projects.p9.desc": "Daily Need Items platform Ꮟအောကျ် ဖြစ်ပါသော React Native mobile app ဖြစ်ပါသည်။ web app နှင့် တူညီသော microservices backend ကိုပင် သုံးထားသဖ်င့် catalog၊ cart၊ orders နှင့် delivery tracking များကို ဖုန််း နှင့် browser နှစ်ခုလုံးတွင် တစ်ပြေးညီ ရှန်နေပါသည်။",
+    "projects.p9.desc": "Daily Need Items platform အတွက် တည်ဆောက်ထားသော React Native mobile app ဖြစ်ပါသည်။ web app နှင့် တူညီသော microservices backend ကိုပင် သုံးထားသဖြင့် catalog၊ cart၊ orders နှင့် delivery tracking များကို ဖုန်းနှင့် browser နှစ်ခုလုံးတွင် တစ်ပြေးညီ မြင်နိုင်ပါသည်။",
 
     // Contact
     "contact.title": "အတူတကွ လုပ်ကိုင်ကြရအောင်",
