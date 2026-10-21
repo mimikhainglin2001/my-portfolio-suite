@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Github, ExternalLink } from "lucide-react";
+import { useRef, useState } from "react";
+import { ArrowLeft, ArrowRight, ExternalLink, Github } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import SectionHeading from "@/components/SectionHeading";
 import p1 from "@/assets/project-1.png";
@@ -15,9 +15,13 @@ import p9 from "@/assets/project-9.png";
 const FILTERS = ["All", "Web", "Mobile", "Enterprise"] as const;
 type Filter = (typeof FILTERS)[number];
 
+const pad = (value: number) => String(value).padStart(2, "0");
+
 const Projects = () => {
   const { t } = useLanguage();
   const [active, setActive] = useState<Filter>("All");
+  const [index, setIndex] = useState(0);
+  const dragX = useRef<number | null>(null);
 
   const projects = [
     {
@@ -123,91 +127,160 @@ const Projects = () => {
   ];
 
   const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
+  const count = filtered.length;
+  const safeIndex = count === 0 ? 0 : Math.min(index, count - 1);
+
+  const go = (step: number) => {
+    setIndex((value) => Math.min(count - 1, Math.max(0, value + step)));
+  };
+
+  const selectFilter = (filter: Filter) => {
+    setActive(filter);
+    setIndex(0);
+  };
 
   return (
     <section id="projects" className="section-padding bg-secondary/30">
       <div className="container">
         <SectionHeading title={t("projects.title")} number="06" />
 
-        {/* Filter buttons */}
-        <div className="flex flex-wrap justify-center gap-2 mt-10">
-          {FILTERS.map((f) => (
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-wrap gap-2">
+            {FILTERS.map((filter) => (
+              <button
+                key={filter}
+                onClick={() => selectFilter(filter)}
+                className={`rounded-lg border px-3 py-1.5 text-[14px] font-medium transition-smooth ${
+                  active === filter
+                    ? "border-primary bg-primary text-primary-foreground"
+                    : "border-border text-muted-foreground hover:text-foreground hover:border-primary/25"
+                }`}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-3">
+            <p className="font-mono text-[13px] tabular-nums text-muted-foreground">
+              <span className="text-foreground">{pad(safeIndex + 1)}</span>
+              <span className="mx-1.5">/</span>
+              {pad(count)}
+            </p>
             <button
-              key={f}
-              onClick={() => setActive(f)}
-              className={`rounded-lg border px-3 py-1.5 text-[14px] font-medium transition-smooth ${
-                active === f
-                  ? "border-primary bg-primary text-primary-foreground"
-                  : "border-border text-muted-foreground hover:text-foreground hover:border-primary/25"
-              }`}
+              type="button"
+              onClick={() => go(-1)}
+              disabled={safeIndex === 0}
+              aria-label="Previous project"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-foreground transition-smooth hover:border-foreground/30 disabled:pointer-events-none disabled:opacity-35"
             >
-              {f}
+              <ArrowLeft className="h-4 w-4" />
             </button>
-          ))}
+            <button
+              type="button"
+              onClick={() => go(1)}
+              disabled={safeIndex >= count - 1}
+              aria-label="Next project"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card text-foreground transition-smooth hover:border-foreground/30 disabled:pointer-events-none disabled:opacity-35"
+            >
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
         </div>
 
-        {/* Project grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-          {filtered.map((project) => (
-            <article
-              key={project.title}
-              className="group rounded-xl border border-border bg-card overflow-hidden transition-smooth hover:border-primary/20 hover:shadow-[0_12px_40px_-12px_hsl(var(--glow)/0.12)]"
-            >
-              <div className="aspect-[16/10] overflow-hidden bg-muted">
-                <img
-                  src={project.img}
-                  alt={project.title}
-                  loading="lazy"
-                  width={1024}
-                  height={640}
-                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-smooth"
-                />
-              </div>
-              <div className="p-5 space-y-3">
-                <span className="text-[12px] font-medium uppercase tracking-[0.15em] text-primary">
-                  {project.category}
-                </span>
-                <h3 className="text-[17px] font-semibold">{project.title}</h3>
-                <p className="text-[15px] text-muted-foreground leading-[1.65]">
-                  {project.desc}
-                </p>
-                <div className="flex flex-wrap gap-1.5 pt-1">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded border border-border bg-secondary/50 px-2 py-0.5 text-[13px] font-mono text-muted-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+        <div className="mt-4 h-px w-full bg-border">
+          <div
+            className="h-px bg-foreground transition-[width] duration-500 ease-out"
+            style={{ width: count ? `${((safeIndex + 1) / count) * 100}%` : "0%" }}
+          />
+        </div>
+
+        <div
+          className="mt-8 overflow-hidden"
+          onPointerDown={(event) => {
+            dragX.current = event.clientX;
+          }}
+          onPointerUp={(event) => {
+            if (dragX.current == null) return;
+            const delta = event.clientX - dragX.current;
+            dragX.current = null;
+            if (delta > 48) go(-1);
+            if (delta < -48) go(1);
+          }}
+          onPointerCancel={() => {
+            dragX.current = null;
+          }}
+        >
+          <div
+            className="flex transition-transform duration-500 ease-out"
+            style={{ transform: `translateX(-${safeIndex * 100}%)` }}
+          >
+            {filtered.map((project, projectIndex) => (
+              <article
+                key={project.title}
+                aria-hidden={projectIndex !== safeIndex}
+                className="grid w-full shrink-0 items-center gap-8 lg:grid-cols-12 lg:gap-12"
+              >
+                <div className="overflow-hidden rounded-[1.6rem] border border-border bg-card shadow-soft lg:col-span-7">
+                  <img
+                    src={project.img}
+                    alt={project.title}
+                    width={1024}
+                    height={640}
+                    className="aspect-[16/10] w-full object-cover object-top"
+                  />
                 </div>
-                <div className="flex items-center gap-3 pt-2">
-                  <a
-                    href={project.repo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`${project.title} source code`}
-                    className="inline-flex items-center gap-1.5 text-[14px] font-medium text-muted-foreground hover:text-primary transition-smooth"
-                  >
-                    <Github className="h-4 w-4" />
-                    Code
-                  </a>
-                  {project.demo && (
+
+                <div className="lg:col-span-5">
+                  <p className="font-mono text-[13px] tracking-[0.18em] text-muted-foreground">
+                    {pad(projectIndex + 1)}
+                    <span className="mx-2 text-border">/</span>
+                    {project.category.toUpperCase()}
+                  </p>
+                  <h3 className="mt-3 font-display text-3xl font-semibold leading-tight md:text-4xl">
+                    {project.title}
+                  </h3>
+                  <p className="mt-4 text-[15px] leading-[1.75] text-muted-foreground">
+                    {project.desc}
+                  </p>
+                  <div className="mt-5 flex flex-wrap gap-1.5">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-border bg-card px-2.5 py-1 text-[12px] font-mono text-muted-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-6 flex items-center gap-2">
                     <a
-                      href={project.demo}
+                      href={project.repo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`${project.title} live demo`}
-                      className="inline-flex items-center gap-1.5 text-[14px] font-medium text-primary hover:text-primary-glow transition-smooth"
+                      aria-label={`${project.title} source code`}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-border px-3.5 py-2 text-[13px] font-medium text-muted-foreground transition-smooth hover:text-foreground"
                     >
-                      <ExternalLink className="h-4 w-4" />
-                      Live Demo
+                      <Github className="h-3.5 w-3.5" />
+                      Code
                     </a>
-                  )}
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} live demo`}
+                        className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3.5 py-2 text-[13px] font-medium text-primary-foreground transition-smooth hover:opacity-90"
+                      >
+                        <ExternalLink className="h-3.5 w-3.5" />
+                        Live
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
