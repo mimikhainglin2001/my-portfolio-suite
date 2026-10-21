@@ -104,6 +104,8 @@ export const translations = {
     "projects.p7.desc": "A helpdesk ticketing portal built with React and Laravel. Handles ticket creation, priority routing, agent assignment, SLA tracking, and threaded replies, with supervisor dashboards for response times and resolution rates.",
     "projects.p8.title": "Daily Need Items",
     "projects.p8.desc": "A daily-essentials ordering platform built on a microservices architecture. Independent catalog, inventory, order, payment, and delivery services scale separately behind a React frontend, keeping stock levels and checkout reliable during peak demand.",
+    "projects.p9.title": "Daily Need Items App",
+    "projects.p9.desc": "The React Native mobile companion of the Daily Need Items platform. It runs on the same microservices backend as the web app, so catalog, cart, orders and delivery tracking stay in sync across phone and browser.",
 
     // Contact
     "contact.title": "Let's Work Together",
@@ -226,6 +228,8 @@ export const translations = {
     "projects.p7.desc": "React နှင့် Laravel ဖြင့် တည်ဆောက်ထားသော helpdesk ticketing portal ဖြစ်ပါသည်။ ticket ဖွင့်လှစ်ခြင်း၊ priority ခွဲဝေခြင်း၊ agent တာဝန်ပေးခြင်း၊ SLA ခြေရာခံခြင်းနှင့် အဖြေပြန်ကြားခြင်းများကို ကိုင်တွယ်ပြီး၊ response time နှင့် resolution rate များစောင့်ကြည့်ရန် dashboard များ ပါဝင်ပါသည်။",
     "projects.p8.title": "Daily Need Items",
     "projects.p8.desc": "microservices architecture ဖြင့် တည်ဆောက်ထားသော နေ့စဉ်လိုအပ်သည့် ပစ္စည်းများ မှာယူသည့် platform ဖြစ်ပါသည်။ catalog၊ inventory၊ orders၊ payments၊ delivery ဝန်ဆောင်မှုများကို သီးခြားစီ ချဲ့ထွင်နိုင်ပြီး peak demand တွင်လည်း stock နှင့် checkout များ ယုံကြည်စိတ်ချရစေပါသည်။",
+    "projects.p9.title": "Daily Need Items App",
+    "projects.p9.desc": "Daily Need Items platform Ꮟအောကျ် ဖြစ်ပါသော React Native mobile app ဖြစ်ပါသည်။ web app နှင့် တူညီသော microservices backend ကိုပင် သုံးထားသဖ်င့် catalog၊ cart၊ orders နှင့် delivery tracking များကို ဖုန််း နှင့် browser နှစ်ခုလုံးတွင် တစ်ပြေးညီ ရှန်နေပါသည်။",
 
     // Contact
     "contact.title": "အတူတကွ လုပ်ကိုင်ကြရအောင်",
