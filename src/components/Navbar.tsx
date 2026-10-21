@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Moon, Sun, Languages, Download, Menu, X } from "lucide-react";
+import { Moon, Sun, Download, Menu, X } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
@@ -37,26 +37,27 @@ const Navbar = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-[100] h-14 transition-smooth",
+        "fixed top-0 left-0 right-0 z-[100] h-16 transition-smooth",
         scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-sm"
+          ? "bg-background/85 backdrop-blur-xl border-b border-border"
           : "bg-transparent",
       )}
     >
       <nav className="container flex h-full items-center justify-between" aria-label="Primary">
         <button
           onClick={() => handleNav("home")}
-          className="font-display text-[15px] font-semibold tracking-[-0.01em] text-foreground hover:text-primary transition-smooth"
+          className="font-mono text-[15px] font-semibold tracking-[0.08em] uppercase text-foreground hover:text-muted-foreground transition-smooth"
         >
-          <span className="text-primary">MI MI KHAING</span> LIN
+          <span className="text-muted-foreground">&lt;</span>Dev Portfolio
+          <span className="text-muted-foreground">/&gt;</span>
         </button>
 
-        <ul className="hidden md:flex items-center gap-0.5">
+        <ul className="hidden lg:flex items-center gap-0.5">
           {NAV_ITEMS.map((item) => (
             <li key={item.id}>
               <button
                 onClick={() => handleNav(item.id)}
-                className="px-3 py-1.5 text-[15px] font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-smooth"
+                className="px-3 py-1.5 text-[14px] font-medium text-muted-foreground hover:text-foreground rounded-full transition-smooth"
               >
                 {t(item.key)}
               </button>
@@ -65,58 +66,81 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-2">
+          {/* Language pill */}
           <button
             onClick={toggleLang}
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground rounded-md transition-smooth"
+            className="inline-flex items-center rounded-full border border-border bg-card p-0.5 text-[12px] font-semibold transition-smooth"
             aria-label="Toggle language"
           >
-            <Languages className="h-4 w-4" />
-            <span className="text-xs uppercase">{lang}</span>
+            <span
+              className={cn(
+                "rounded-full px-2.5 py-1 transition-smooth",
+                lang === "en"
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground",
+              )}
+            >
+              EN
+            </span>
+            <span
+              className={cn(
+                "rounded-full px-2.5 py-1 transition-smooth",
+                lang === "mm"
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground",
+              )}
+            >
+              MM
+            </span>
           </button>
 
-          <a
-            href="/Mi_Mi_Khaing_Lin_CV_Final.pdf"
-            download
-            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground rounded-md transition-smooth"
-          >
-            <Download className="h-4 w-4" />
-            CV
-          </a>
-
+          {/* Theme toggle */}
           <button
             onClick={toggleTheme}
-            className="h-9 w-9 rounded-lg border border-border bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary transition-smooth"
+            className="h-9 w-9 rounded-full border border-border bg-card flex items-center justify-center text-muted-foreground hover:text-foreground transition-smooth"
             aria-label="Toggle theme"
           >
             {theme === "light" ? (
-              <Moon className="h-[18px] w-[18px]" />
+              <Moon className="h-4 w-4" />
             ) : (
-              <Sun className="h-[18px] w-[18px]" />
+              <Sun className="h-4 w-4" />
             )}
           </button>
 
+          {/* Resume */}
+          <a
+            href="/Mi_Mi_Khaing_Lin_CV_Final.pdf"
+            download
+            className="hidden sm:inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-[13px] font-semibold text-primary-foreground hover:opacity-90 transition-smooth"
+          >
+            <Download className="h-3.5 w-3.5" />
+            {t("nav.resume")}
+          </a>
+
+          {/* Menu pill (mobile) */}
           <button
-            className="md:hidden h-9 w-9 rounded-lg border border-border bg-secondary/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-secondary transition-smooth"
+            className="lg:hidden inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-2 text-[12px] font-semibold tracking-[0.08em] uppercase text-foreground transition-smooth"
             onClick={() => setMobileOpen((o) => !o)}
             aria-label="Toggle menu"
           >
+            Menu
             {mobileOpen ? (
-              <X className="h-[18px] w-[18px]" />
+              <X className="h-4 w-4" />
             ) : (
-              <Menu className="h-[18px] w-[18px]" />
+              <Menu className="h-4 w-4" />
             )}
           </button>
         </div>
       </nav>
 
       {mobileOpen && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-xl animate-fade-in">
+        <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur-xl animate-fade-in">
           <ul className="container py-4 flex flex-col gap-1">
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
                 <button
                   onClick={() => handleNav(item.id)}
-                  className="w-full text-left px-3 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/50 rounded-md transition-smooth"
+                  className="w-full text-left px-3 py-3 text-base font-medium text-muted-foreground hover:text-foreground hover:bg-secondary/60 rounded-lg transition-smooth"
                 >
                   {t(item.key)}
                 </button>
@@ -126,7 +150,7 @@ const Navbar = () => {
               <a
                 href="/Mi_Mi_Khaing_Lin_CV_Final.pdf"
                 download
-                className="flex items-center gap-2 w-full px-3 py-3 text-base font-medium text-foreground bg-primary text-primary-foreground rounded-md"
+                className="flex items-center gap-2 w-full px-3 py-3 text-base font-medium bg-primary text-primary-foreground rounded-lg"
               >
                 <Download className="h-4 w-4" />
                 {t("nav.resume")}
